@@ -2,24 +2,22 @@
 
 {% block content %}
 
-<h1 class="text-center m-2">Frases</h1>
+<h1 class="text-center m-2">{{ _('Frases') }}</h1>
 
 <form class="container pb-3" style="max-width: 40rem" method="GET" action="{{ url_for('syllabus.index') }}">
     <div class="form-row">
         <div class="col d-flex justify-content-center">
-            <a href="/syllabus/create" class="btn btn-success m-2"><i class="bi bi-plus-square"></i>&nbsp;&nbsp;Añadir
-                Frase</a>
-            <a href="/syllabus/create_iterable" class="btn btn-success m-2"><i
-                    class="bi bi-plus-square"></i>&nbsp;&nbsp;Crear encadenado</a>
+            <a href="/syllabus/create" class="btn btn-success m-2"><i class="bi bi-plus-square"></i>&nbsp;&nbsp;{{ _('Añadir Frase') }}</a>
+            <a href="/syllabus/create_iterable" class="btn btn-success m-2"><i class="bi bi-plus-square"></i>&nbsp;&nbsp;{{ _('Crear encadenado') }}</a>
         </div>
         <div class="col">
             <div class="input-group">
-                <input type="search" name="tagName" class="form-control" placeholder="Buscar..."
-                    aria-label="Buscar tag..." aria-describedby="button-search" value="{{ tag_name }}">
+                <input type="search" name="tagName" class="form-control" placeholder="{{ _('Buscar...') }}"
+                    aria-label="{{ _('Buscar tag...') }}" aria-describedby="button-search" value="{{ tag_name }}">
                 <input type="date" name="tagDateSince" class="form-control" value="{{ tag_date_since }}">
                 <input type="date" name="tagDateTo" class="form-control" value="{{ tag_date_to }}">
                 <button class="btn btn-primary" type="submit" id="button-search">
-                    <i class="bi bi-search me-2"></i>Buscar
+                    <i class="bi bi-search me-2"></i>{{ _('Buscar') }}
                 </button>
             </div>
         </div>
@@ -31,12 +29,11 @@
     <article class="card shadow-sm" style="width: 20rem">
         <section class="card-body d-flex flex-column">
             <p class="card-text">{{ frase.texto }}</p>
-            <footer class="blockquote-footer"><cite title="Tags">Etiquetas: </cite>{{ frase.tags }}</footer>
+            <footer class="blockquote-footer"><cite title="Tags">{{ _('Etiquetas') }}: </cite>{{ frase.tags }}</footer>
         </section>
         <section class="card-footer">
-            <a href="/syllabus/update/{{ frase._id }}" class="btn btn-warning"><i class="bi bi-pencil">Editar</i></a>
-            <a href="/syllabus/delete/{{ frase._id }}" class="btn btn-danger" title="borrar texto"><i
-                    class="bi bi-trash">Eliminar</i></a>
+            <a href="/syllabus/update/{{ frase._id }}" class="btn btn-warning"><i class="bi bi-pencil">{{ _('Editar') }}</i></a>
+            <a href="/syllabus/delete/{{ frase._id }}" class="btn btn-danger" title="{{ _('borrar texto') }}"><i class="bi bi-trash">{{ _('Eliminar') }}</i></a>
         </section>
     </article>
     {% endfor %}

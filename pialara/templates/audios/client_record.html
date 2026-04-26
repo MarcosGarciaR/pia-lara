@@ -2,7 +2,7 @@
 
 {% block content %}
 <header class="header">
-  <h1 class="text-center">Grabar audio a partir de la etiqueta <strong>{{ tag }}</strong></h1>
+  <h1 class="text-center">{{ _('Grabar audio a partir de la etiqueta') }} <strong>{{ tag }}</strong></h1>
   <br />
 </header>
 <script>
@@ -11,17 +11,17 @@
 
 <section class="syllabus m-auto">
   <header class="syllabus__header">
-    <h2 class="tag">Frase</h2>
+    <h2 class="tag">{{ _('Frase') }}</h2>
   </header>
 
   <section class="syllabus__buttons">
     <button class="button" type="button" id="play-button">
       <span><i class="bi bi-ear me-2"></i></span>
-      <span>Escuchar</span>
+      <span>{{ _('Escuchar') }}</span>
     </button>
     <button class="button show-syllabus-button" type="button">
       <span><i class="bi bi-card-text me-2"></i></span>
-      <span class="show-syllabus-button-text">Mostrar</span>
+      <span class="show-syllabus-button-text">{{ _('Mostrar') }}</span>
     </button>
   </section>
 
@@ -94,11 +94,11 @@
     <div hidden id="spinner" class="spinner-border spinner-border-sm" role="status">
       <span class="sr-only"></span>
     </div>
-    Enviar
+    {{ _('Enviar') }}
   </button>
 
   <a href="" class="button skip-button">
-    <span>Saltar a otra frase</span>
+    <span>{{ _('Saltar a otra frase') }}</span>
     <span>
       <svg width="22" height="22" viewBox="0 0 22 22">
         <defs>

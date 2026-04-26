@@ -2,19 +2,19 @@
 
 {% block content %}
     <header class="header">
-        <h1 class="text-center">Grabar mi audio</h1>
+        <h1 class="text-center">{{ _('Grabar mi audio') }}</h1>
         <br />
     </header>
 
     <section class="syllabus m-auto">
         <header class="syllabus__header">
-            <h2>Grabar mi audio</h2>
+            <h2>{{ _('Grabar mi audio') }}</h2>
         </header>
 
         <section class="syllabus__text" id="syllabus-collapse">
             <p class="hide-syllabus-text" id="syllabus-tag">{{ current_user.email }}</p>
             <p class="hide-syllabus-text" id="syllabus-type">frase</p>
-            <textarea id="syllabus-text" placeholder="Escribe aquí tu frase"></textarea>
+            <textarea id="syllabus-text" placeholder="{{ _('Escribe aquí tu frase') }}"></textarea>
         </section>
     </section>
 
@@ -49,7 +49,7 @@
             <div hidden id="spinner" class="spinner-border spinner-border-sm" role="status">
                 <span class="sr-only"></span>
             </div>
-            Enviar
+            {{ _('Enviar') }}
         </button>
     </section>
 

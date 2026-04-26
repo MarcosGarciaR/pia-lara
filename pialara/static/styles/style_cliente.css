@@ -502,3 +502,38 @@ div.container-paginacion {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
 }
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#langBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: inherit;
+}
+
+/* menú */
+.lang-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    /* 👇 AQUÍ EL CAMBIO */
+    background: rgba(0, 0, 0, 0.6); /* fondo semitransparente */
+    backdrop-filter: blur(6px);     /* efecto moderno (opcional) */
+    
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+/* links */
+.lang-menu a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: white; /* importante si fondo oscuro */
+}

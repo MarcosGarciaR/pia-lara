@@ -1,0 +1,1553 @@
+# English translations for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-04-19 17:54+0200\n"
+"PO-Revision-Date: 2026-04-19 16:54+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: pialara/blueprints/audios.py:32
+#, fuzzy
+msgid "Principiante"
+msgstr "Beginner"
+
+#: pialara/blueprints/audios.py:33
+msgid "Avanzado"
+msgstr "Advanced"
+
+#: pialara/blueprints/audios.py:34
+msgid "Especialista"
+msgstr "Specialist"
+
+#: pialara/blueprints/audios.py:35
+#, fuzzy
+msgid "Profesional"
+msgstr "Professional"
+
+#: pialara/blueprints/audios.py:36
+#, fuzzy
+msgid "Experto"
+msgstr "Expert"
+
+#: pialara/blueprints/audios.py:37
+#, fuzzy
+msgid "Leyenda"
+msgstr "Legend"
+
+#: pialara/blueprints/audios.py:74
+msgid "Novato"
+msgstr "Rookie"
+
+#: pialara/blueprints/audios.py:341
+#, python-format
+msgid "No se han encontrado frases con la etiqueta '%(tag)s'"
+msgstr "No phrases found with the tag '%(tag)s'"
+
+#: pialara/blueprints/audios.py:486
+msgid "El audio ha sido almacenado correctamente."
+msgstr "The audio has been stored successfully."
+
+#: pialara/blueprints/audios.py:498
+msgid "Falta la imagen de la insignia"
+msgstr "Badge image is missing"
+
+#: pialara/blueprints/audios.py:516
+msgid "Insignia no desbloqueada"
+msgstr "Badge not unlocked"
+
+#: pialara/blueprints/audios.py:524
+msgid "Insignia seleccionada con éxito"
+msgstr "Badge selected successfully"
+
+#: pialara/blueprints/audios.py:567
+#, python-format
+msgid "No se han encontrado resultados de la etiqueta '%(tag)s'"
+msgstr "No results found for the tag '%(tag)s'"
+
+#: pialara/blueprints/auth.py:27
+msgid "Por favor, comprueba tus datos y vuélvelo a intentar"
+msgstr "Please check your details and try again"
+
+#: pialara/blueprints/auth.py:56
+msgid "El correo introducido no está registrado"
+msgstr "The entered email is not registered"
+
+#: pialara/blueprints/auth.py:60
+msgid "El nombre no coincide con el correo introducido"
+msgstr "The name does not match the entered email"
+
+#: pialara/blueprints/auth.py:66
+msgid "Datos verificados. Introduce tu nueva contraseña"
+msgstr "Details verified. Enter your new password"
+
+#: pialara/blueprints/auth.py:79
+msgid "Las contraseñas no coinciden"
+msgstr "Passwords do not match"
+
+#: pialara/blueprints/auth.py:85
+msgid "Error: no se encontró la sesión de recuperación"
+msgstr "Error: recovery session not found"
+
+#: pialara/blueprints/auth.py:91
+msgid "No se encontró el usuario"
+msgstr "User not found"
+
+#: pialara/blueprints/auth.py:98
+msgid "Contraseña cambiada con éxito"
+msgstr "Password changed successfully"
+
+#: pialara/blueprints/auth.py:109
+msgid "Sesión cerrada con éxito"
+msgstr "Logged out successfully"
+
+#: pialara/blueprints/syllabus.py:19
+msgid "mañana"
+msgstr "Morning"
+
+#: pialara/blueprints/syllabus.py:21
+msgid "tarde"
+msgstr "Afternoon"
+
+#: pialara/blueprints/syllabus.py:22
+msgid "noche"
+msgstr "Night"
+
+#: pialara/blueprints/syllabus.py:133
+msgid "No se han encontrado resultados"
+msgstr "No results found"
+
+#: pialara/blueprints/syllabus.py:179
+msgid "No hay frases disponibles"
+msgstr "No phrases available"
+
+#: pialara/blueprints/syllabus.py:226
+msgid "Texto creado correctamente"
+msgstr "Text created successfully"
+
+#: pialara/blueprints/syllabus.py:229
+msgid "La frase no se ha creado. Error genérico"
+msgstr "The phrase could not be created. Generic error"
+
+#: pialara/blueprints/syllabus.py:243
+msgid "El campo de etiquetas no puede estar vacío."
+msgstr "The tags field cannot be empty."
+
+#: pialara/blueprints/syllabus.py:307
+msgid "Iterable creado correctamente"
+msgstr "Chain created successfully"
+
+#: pialara/blueprints/syllabus.py:310
+msgid "Campos erroneos!"
+msgstr "Invalid fields!"
+
+#: pialara/blueprints/syllabus.py:355
+msgid "Texto actualizado correctamente"
+msgstr "Text updated successfully"
+
+#: pialara/blueprints/syllabus.py:358
+msgid "Error al actualizar texto, inténtelo de nuevo..."
+msgstr "Error updating text, please try again..."
+
+#: pialara/blueprints/syllabus.py:361
+msgid "La frase no se ha actualizado. Error genérico"
+msgstr "The phrase could not be updated. Generic error"
+
+#: pialara/blueprints/syllabus.py:372
+msgid "Frase eliminada correctamente"
+msgstr "Phrase deleted successfully"
+
+#: pialara/blueprints/syllabus.py:375
+msgid "La frase no se ha eliminado. Error genérico"
+msgstr "The phrase could not be deleted. Generic error"
+
+#: pialara/blueprints/users.py:143 pialara/blueprints/users.py:608
+msgid "Las contraseñas no son iguales"
+msgstr "Passwords do not match"
+
+#: pialara/blueprints/users.py:150
+msgid "El correo del admin ya existe"
+msgstr "Admin email already exists"
+
+#: pialara/blueprints/users.py:164 pialara/blueprints/users.py:188
+#: pialara/blueprints/users.py:257
+msgid "Usuario creado correctamente"
+msgstr "User created successfully"
+
+#: pialara/blueprints/users.py:167 pialara/blueprints/users.py:191
+#: pialara/blueprints/users.py:260
+msgid "El usuario no se ha creado. Error genérico"
+msgstr "The user could not be created. Generic error"
+
+#: pialara/blueprints/users.py:173
+msgid "El correo del técnico ya existe"
+msgstr "Technician email already exists"
+
+#: pialara/blueprints/users.py:197
+msgid "El correo del cliente ya existe"
+msgstr "Client email already exists"
+
+#: pialara/blueprints/users.py:201
+msgid "Fecha de nacimiento vacía"
+msgstr "Date of birth is empty"
+
+#: pialara/blueprints/users.py:264
+msgid "Formulario incompleto: no se recibió admin/técnico/cliente"
+msgstr "Incomplete form: no admin/technician/client data received"
+
+#: pialara/blueprints/users.py:304
+msgid "Error localizando al técnico. Id inexistente."
+msgstr "Error locating the technician. Non-existent ID."
+
+#: pialara/blueprints/users.py:321
+msgid "Error localizando al técnico seleccionado"
+msgstr "Error locating the selected technician"
+
+#: pialara/blueprints/users.py:330
+msgid "Tecnico migrado con exito"
+msgstr "Technician migrated successfully"
+
+#: pialara/blueprints/users.py:421
+msgid "Usuario no encontrado"
+msgstr "User not found"
+
+#: pialara/blueprints/users.py:518 pialara/blueprints/users.py:563
+msgid "Usuario actualizado correctamente"
+msgstr "User updated successfully"
+
+#: pialara/blueprints/users.py:521 pialara/blueprints/users.py:566
+msgid "Error al actualizar el usuario, inténtelo de nuevo..."
+msgstr "Error updating the user, please try again..."
+
+#: pialara/blueprints/users.py:603
+msgid "Su contraseña no es correcta"
+msgstr "Your password is incorrect"
+
+#: pialara/blueprints/users.py:618
+msgid "Contraseña actualizada correctamente"
+msgstr "Password updated successfully"
+
+#: pialara/blueprints/users.py:621
+msgid "Error al actualizar la constraseña, inténtelo de nuevo..."
+msgstr "Error updating the password, please try again..."
+
+#: pialara/templates/layout.html:59 pialara/templates/layout.html:112
+msgid "Usuarios"
+msgstr "Users"
+
+#: pialara/templates/layout.html:60 pialara/templates/layout.html:113
+#: pialara/templates/syllabus/index.html:5
+msgid "Frases"
+msgstr "Phrases"
+
+#: pialara/templates/layout.html:61 pialara/templates/layout.html:66
+#: pialara/templates/layout.html:114 pialara/templates/layout.html:119
+msgid "Informes"
+msgstr "Reports"
+
+#: pialara/templates/layout.html:64 pialara/templates/layout.html:117
+msgid "Ver etiquetas"
+msgstr "View tags"
+
+#: pialara/templates/audios/client_text.html:5
+#: pialara/templates/audios/client_text.html:11
+#: pialara/templates/layout.html:65 pialara/templates/layout.html:118
+msgid "Grabar mi audio"
+msgstr "Record my audio"
+
+#: pialara/templates/audios/client_report.html:187
+#: pialara/templates/layout.html:72 pialara/templates/layout.html:126
+msgid "audios"
+msgstr "audios"
+
+#: pialara/templates/layout.html:87 pialara/templates/layout.html:138
+msgid "Color por defecto (Reset)"
+msgstr "Default color (Reset)"
+
+#: pialara/templates/layout.html:87 pialara/templates/layout.html:138
+msgid "Color por Defecto"
+msgstr "Default Color"
+
+#: pialara/templates/layout.html:88 pialara/templates/layout.html:139
+msgid "Alto Contraste 1"
+msgstr "High Contrast 1"
+
+#: pialara/templates/layout.html:89 pialara/templates/layout.html:140
+msgid "Alto Contraste 2"
+msgstr "High Contrast 2"
+
+#: pialara/templates/layout.html:90 pialara/templates/layout.html:141
+msgid "Alto Contraste 3"
+msgstr "High Contrast 3"
+
+#: pialara/templates/layout.html:95 pialara/templates/layout.html:161
+msgid "Salir"
+msgstr "Logout"
+
+#: pialara/templates/audios/client_record.html:5
+msgid "Grabar audio a partir de la etiqueta"
+msgstr "Record audio from tag"
+
+#: pialara/templates/audios/client_record.html:14
+#: pialara/templates/syllabus/create.html:16
+#: pialara/templates/syllabus/update.html:17
+msgid "Frase"
+msgstr "Phrase"
+
+#: pialara/templates/audios/client_record.html:20
+#: pialara/templates/audios/client_tag.html:92
+msgid "Escuchar"
+msgstr "Listen"
+
+#: pialara/templates/audios/client_record.html:24
+msgid "Mostrar"
+msgstr "Show"
+
+#: pialara/templates/audios/client_record.html:97
+#: pialara/templates/audios/client_text.html:52
+#: pialara/templates/lara/lara.html:35
+msgid "Enviar"
+msgstr "Send"
+
+#: pialara/templates/audios/client_record.html:101
+msgid "Saltar a otra frase"
+msgstr "Skip to another phrase"
+
+#: pialara/templates/audios/client_report.html:6
+#: pialara/templates/audios/client_report.html:8
+msgid "Resumen de Audios de"
+msgstr "Audio Summary for"
+
+#: pialara/templates/audios/client_report.html:10
+msgid "Mi resumen de audios"
+msgstr "My audio summary"
+
+#: pialara/templates/audios/client_report.html:21
+msgid "Total Audios"
+msgstr "Total Audios"
+
+#: pialara/templates/audios/client_report.html:32
+msgid "Fonemas Únicos"
+msgstr "Unique Phonemes"
+
+#: pialara/templates/audios/client_report.html:43
+#: pialara/templates/audios/client_tag.html:5
+#: pialara/templates/audios/client_tag.html:87
+#: pialara/templates/syllabus/index.html:32
+msgid "Etiquetas"
+msgstr "Tags"
+
+#: pialara/templates/audios/client_report.html:49
+msgid "Últimas"
+msgstr "Latest"
+
+#: pialara/templates/audios/client_report.html:57
+#: pialara/templates/audios/client_report.html:112
+msgid "Sin datos"
+msgstr "No data"
+
+#: pialara/templates/audios/client_report.html:66
+msgid "Más Frecuentes"
+msgstr "Most Frequent"
+
+#: pialara/templates/audios/client_report.html:82
+msgid "Menos Frecuentes"
+msgstr "Least Frequent"
+
+#: pialara/templates/audios/client_report.html:98
+msgid "Fonemas"
+msgstr "Phonemes"
+
+#: pialara/templates/audios/client_report.html:104
+msgid "Últimos"
+msgstr "Latest"
+
+#: pialara/templates/audios/client_report.html:121
+msgid "Más Practicados"
+msgstr "Most Practiced"
+
+#: pialara/templates/audios/client_report.html:137
+msgid "Menos Practicados"
+msgstr "Least Practiced"
+
+#: pialara/templates/audios/client_report.html:153
+msgid "Audios por Categoría"
+msgstr "Audios by Category"
+
+#: pialara/templates/audios/client_report.html:158
+msgid "Categoría"
+msgstr "Category"
+
+#: pialara/templates/audios/client_report.html:159
+msgid "Cantidad"
+msgstr "Quantity"
+
+#: pialara/templates/audios/client_report.html:179
+msgid "Mis Insignias"
+msgstr "My Badges"
+
+#: pialara/templates/audios/client_report.html:186
+msgid "Siguiente nivel"
+msgstr "Next level"
+
+#: pialara/templates/audios/client_report.html:200
+msgid "¡Te faltan"
+msgstr "You need"
+
+#: pialara/templates/audios/client_report.html:200
+msgid "audios para tu próxima insignia!"
+msgstr "more audios for your next badge!"
+
+#: pialara/templates/audios/client_report.html:203
+msgid "¡Has alcanzado el nivel máximo!"
+msgstr "You have reached the maximum level!"
+
+#: pialara/templates/audios/client_report.html:204
+msgid "audios grabados"
+msgstr "recorded audios"
+
+#: pialara/templates/audios/client_tag.html:13
+msgid "Objetivo Diario"
+msgstr "Daily Goal"
+
+#: pialara/templates/audios/client_tag.html:27
+msgid "¡Objetivo alcanzado! 🎉"
+msgstr "Goal reached! 🎉"
+
+#: pialara/templates/audios/client_tag.html:29
+#, python-format
+msgid "¡Sigue así! Te faltan %(n)s para tu meta."
+msgstr "Keep it up! You need %(n)s more to reach your goal."
+
+#: pialara/templates/audios/client_tag.html:57
+msgid "Buscar etiqueta..."
+msgstr "Search tag..."
+
+#: pialara/templates/audios/client_tag.html:68
+msgid "Frase sugerida"
+msgstr "Suggested phrase"
+
+#: pialara/templates/audios/client_tag.html:75
+msgid "General"
+msgstr "General"
+
+#: pialara/templates/audios/client_tag.html:76
+msgid "Tecnología"
+msgstr "Technology"
+
+#: pialara/templates/audios/client_tag.html:77
+msgid "Deporte"
+msgstr "Sport"
+
+#: pialara/templates/audios/client_tag.html:78
+msgid "Música"
+msgstr "Music"
+
+#: pialara/templates/audios/client_tag.html:79
+msgid "Fútbol"
+msgstr "Football"
+
+#: pialara/templates/audios/client_tag.html:80
+msgid "Viajes"
+msgstr "Travel"
+
+#: pialara/templates/audios/client_tag.html:103
+msgid "¿Voy a tener suerte?"
+msgstr "Feeling lucky?"
+
+#: pialara/templates/audios/client_tag.html:112
+msgid "Audios grabados"
+msgstr "Recorded audios"
+
+#: pialara/templates/audios/client_tag.html:118
+msgid "Últimas 5 etiquetas grabadas"
+msgstr "Last 5 recorded tags"
+
+#: pialara/templates/audios/client_tag.html:120
+#: pialara/templates/audios/client_tag.html:131
+#: pialara/templates/audios/client_tag.html:142
+msgid "Total audios grabados"
+msgstr "Total recorded audios"
+
+#: pialara/templates/audios/client_tag.html:129
+msgid "5 etiquetas más grabadas"
+msgstr "5 most recorded tags"
+
+#: pialara/templates/audios/client_tag.html:140
+msgid "5 etiquetas menos grabadas"
+msgstr "5 least recorded tags"
+
+#: pialara/templates/audios/client_tag.html:213
+#: pialara/templates/audios/client_tag.html:251
+msgid "Etiquetas encontradas"
+msgstr "Tags found"
+
+#: pialara/templates/audios/client_tag.html:226
+msgid "Etiquetas aleatorias"
+msgstr "Random tags"
+
+#: pialara/templates/audios/client_tag.html:232
+msgid "frase larga"
+msgstr "long phrase"
+
+#: pialara/templates/audios/client_tag.html:232
+msgid "frase corta"
+msgstr "short phrase"
+
+#: pialara/templates/audios/client_tag.html:234
+msgid "abajo"
+msgstr "down"
+
+#: pialara/templates/audios/client_tag.html:235
+msgid "medio"
+msgstr "middle"
+
+#: pialara/templates/audios/client_tag.html:236
+msgid "arriba"
+msgstr "up"
+
+#: pialara/templates/audios/client_tag.html:237
+msgid "desconocida"
+msgstr "unknown"
+
+#: pialara/templates/audios/client_tag.html:240
+msgid "fonema"
+msgstr "phoneme"
+
+#: pialara/templates/audios/client_tag.html:240
+msgid "lengua"
+msgstr "tongue"
+
+#: pialara/templates/audios/client_text.html:17
+msgid "Escribe aquí tu frase"
+msgstr "Write your phrase here"
+
+#: pialara/templates/auth/email_rec_password.html:8
+msgid "Recuperar contraseña"
+msgstr "Recover password"
+
+#: pialara/templates/auth/email_rec_password.html:22
+#: pialara/templates/auth/info_rec_password.html:21
+msgid ""
+"El PIA Lara nace como un Proyecto de Innovación Aplicada impulsado desde "
+"la Conselleria \n"
+"                        d'Educació de la Comunitat Valenciana para "
+"fomentar actuaciones de carácter innovador, \n"
+"                        experimental y formativo en FP, promoviendo la "
+"innovación en la práctica docente así como las \n"
+"                        relaciones entre los centros educativos de FP y "
+"las empresas."
+msgstr ""
+"PIA Lara was born as an Applied Innovation Project promoted by the "
+"Conselleria \n"
+"                        d'Educació of the Comunitat Valenciana to foster "
+"innovative, \n"
+"                        experimental and educational actions in VET, "
+"promoting innovation in teaching practice as well as \n"
+"                        relations between VET educational centres and "
+"companies."
+
+#: pialara/templates/auth/email_rec_password.html:27
+#: pialara/templates/auth/info_rec_password.html:25
+#: pialara/templates/auth/login.html:27
+#: pialara/templates/auth/rec_password.html:20
+msgid "Este proyecto se desarrolla de manera conjunta por:"
+msgstr "This project is jointly developed by:"
+
+#: pialara/templates/auth/email_rec_password.html:41
+#: pialara/templates/auth/rec_password.html:34
+msgid "RECUPERAR CONTRASEÑA"
+msgstr "RECOVER PASSWORD"
+
+#: pialara/templates/auth/email_rec_password.html:53
+msgid "Introduce tu E-Mail"
+msgstr "Enter your E-Mail"
+
+#: pialara/templates/auth/email_rec_password.html:54
+#: pialara/templates/auth/login.html:55
+msgid "Tu Email"
+msgstr "Your Email"
+
+#: pialara/templates/auth/email_rec_password.html:58
+msgid "Introduce tu Nombre"
+msgstr "Enter your Name"
+
+#: pialara/templates/auth/email_rec_password.html:59
+msgid "Tu Nombre"
+msgstr "Your Name"
+
+#: pialara/templates/auth/email_rec_password.html:63
+msgid "ENVIAR"
+msgstr "SEND"
+
+#: pialara/templates/auth/info_rec_password.html:39
+#: pialara/templates/auth/info_rec_password.html:65
+msgid "CAMBIAR CONTRASEÑA"
+msgstr "CHANGE PASSWORD"
+
+#: pialara/templates/auth/info_rec_password.html:53
+#: pialara/templates/users/update-pass.html:40
+msgid "Nueva Contraseña"
+msgstr "New Password"
+
+#: pialara/templates/auth/info_rec_password.html:55
+msgid "Introduce tu nueva contraseña"
+msgstr "Enter your new password"
+
+#: pialara/templates/auth/info_rec_password.html:59
+msgid "Confirmar Contraseña"
+msgstr "Confirm Password"
+
+#: pialara/templates/auth/info_rec_password.html:61
+msgid "Repite la nueva contraseña"
+msgstr "Repeat the new password"
+
+#: pialara/templates/auth/login.html:21
+msgid ""
+"El PIA Lara nace como un Proyecto de Investigación Aplicada impulsado "
+"desde la"
+msgstr "PIA Lara was born as an Applied Research Project promoted by"
+
+#: pialara/templates/auth/login.html:22
+msgid "Conselleria d'Educació"
+msgstr "Conselleria d'Educació"
+
+#: pialara/templates/auth/login.html:22
+msgid "de la"
+msgstr "of the"
+
+#: pialara/templates/auth/login.html:23
+msgid "Comunitat Valenciana"
+msgstr "Comunitat Valenciana"
+
+#: pialara/templates/auth/login.html:24
+msgid ""
+"para fomentar actuaciones de carácter innovador, experimental y formativo"
+" en FP, promoviendo la innovación en la práctica docente así como las "
+"relaciones entre los centros educativos de FP y las empresas."
+msgstr ""
+"to foster innovative, experimental and educational actions in VET, "
+"promoting innovation in teaching practice as well as relations between "
+"VET educational centres and companies."
+
+#: pialara/templates/auth/login.html:26
+msgid ""
+"Actualmente está financiado por el Ministerio de Educación, Formación "
+"Profesional y Deportes de España mediante el Plan de Recuperación, "
+"Transformación y Resiliencia y la Unión Europea mediante los fondos "
+"NextGenerationEU."
+msgstr ""
+"It is currently funded by the Spanish Ministry of Education, Vocational "
+"Training and Sports through the Recovery, Transformation and Resilience "
+"Plan and the European Union through the NextGenerationEU funds."
+
+#: pialara/templates/auth/login.html:28 pialara/templates/auth/login.html:32
+msgid "de Elche"
+msgstr "of Elche"
+
+#: pialara/templates/auth/login.html:29
+msgid "de Alicante"
+msgstr "of Alicante"
+
+#: pialara/templates/auth/login.html:30
+msgid "de Mérida"
+msgstr "of Mérida"
+
+#: pialara/templates/auth/login.html:31
+msgid "de Sevilla"
+msgstr "of Seville"
+
+#: pialara/templates/auth/login.html:43
+msgid "Bienvenido"
+msgstr "Welcome"
+
+#: pialara/templates/auth/login.html:54
+msgid "Usuario"
+msgstr "Username"
+
+#: pialara/templates/auth/login.html:58 pialara/templates/users/create.html:222
+#: pialara/templates/users/create.html:256
+#: pialara/templates/users/create.html:285
+#: pialara/templates/users/update-pass.html:30
+msgid "Contraseña"
+msgstr "Password"
+
+#: pialara/templates/auth/login.html:59
+#: pialara/templates/auth/rec_password.html:51
+msgid "Tu contraseña"
+msgstr "Your password"
+
+#: pialara/templates/auth/login.html:63
+msgid "Iniciar Sesión"
+msgstr "Log In"
+
+#: pialara/templates/auth/rec_password.html:19
+msgid ""
+"El PIA Lara nace como un Proyecto de Innovación Aplicada impulsado desde "
+"la Conselleria d'Educació de la Comunitat Valenciana para fomentar "
+"actuaciones de carácter innovador, experimental y formativo en FP, "
+"promoviendo la innovación en la práctica docente así como las relaciones "
+"entre los centros educativos de FP y las empresas."
+msgstr ""
+"PIA Lara was born as an Applied Innovation Project promoted by the "
+"Conselleria d'Educació of the Comunitat Valenciana to foster innovative, "
+"experimental and educational actions in VET, promoting innovation in "
+"teaching practice as well as relations between VET educational centres "
+"and companies."
+
+#: pialara/templates/auth/rec_password.html:46
+msgid "NUEVA CONTRASEÑA"
+msgstr "NEW PASSWORD"
+
+#: pialara/templates/auth/rec_password.html:47
+msgid "Nueva contraseña"
+msgstr "New password"
+
+#: pialara/templates/auth/rec_password.html:50
+msgid "Escriba de nuevo la contraseña"
+msgstr "Re-enter the password"
+
+#: pialara/templates/auth/rec_password.html:54
+msgid "ACEPTAR"
+msgstr "ACCEPT"
+
+#: pialara/templates/auth/register.html:1
+msgid "Register form goes here"
+msgstr "Register form goes here"
+
+#: pialara/templates/lara/lara.html:6 pialara/templates/lara/lara.html:18
+msgid "Habla con Lara"
+msgstr "Talk to Lara"
+
+#: pialara/templates/lara/lara.html:16
+msgid "Logo de Lara"
+msgstr "Lara logo"
+
+#: pialara/templates/lara/lara.html:20
+msgid "Comenzar Grabación"
+msgstr "Start Recording"
+
+#: pialara/templates/lara/lara.html:26
+msgid "Selecciona un modelo"
+msgstr "Select a model"
+
+#: pialara/templates/lara/lara.html:27
+msgid "Modelo 1"
+msgstr "Model 1"
+
+#: pialara/templates/lara/lara.html:28
+msgid "Modelo 2"
+msgstr "Model 2"
+
+#: pialara/templates/lara/lara.html:29
+msgid "Modelo 3"
+msgstr "Model 3"
+
+#: pialara/templates/lara/lara.html:30
+msgid "Modelo 4"
+msgstr "Model 4"
+
+#: pialara/templates/lara/lara.html:37
+msgid "Cargando..."
+msgstr "Loading..."
+
+#: pialara/templates/lara/lara.html:45
+msgid "Transcripción:"
+msgstr "Transcription:"
+
+#: pialara/templates/lara/lara.html:53
+msgid "¿Cómo fue tu experiencia?"
+msgstr "How was your experience?"
+
+#: pialara/templates/main/index.html:5
+msgid "PIA Lara - Captura de datos"
+msgstr "PIA Lara - Data Capture"
+
+#: pialara/templates/main/index.html:8
+msgid "Aplicación de captura de datos para el PIA Lara"
+msgstr "Data capture application for PIA Lara"
+
+#: pialara/templates/syllabus/create.html:11
+#: pialara/templates/syllabus/create.html:24
+#: pialara/templates/syllabus/create_iterable.html:49
+msgid "Crear frase"
+msgstr "Create phrase"
+
+#: pialara/templates/syllabus/create.html:15
+#: pialara/templates/syllabus/update.html:16
+msgid "Texto"
+msgstr "Text"
+
+#: pialara/templates/syllabus/create.html:19
+#: pialara/templates/syllabus/create_iterable.html:44
+#: pialara/templates/syllabus/update.html:20
+msgid "Tags (separados por comas)"
+msgstr "Tags (comma separated)"
+
+#: pialara/templates/syllabus/create.html:20
+#: pialara/templates/syllabus/create_iterable.html:45
+msgid "Tags"
+msgstr "Tags"
+
+#: pialara/templates/syllabus/create_iterable.html:12
+msgid "Crear Encadenados"
+msgstr "Create Chain"
+
+#: pialara/templates/syllabus/create_iterable.html:29
+msgid "¿Cuantas frases encadenadas?"
+msgstr "How many chained phrases?"
+
+#: pialara/templates/syllabus/create_iterable.html:32
+msgid "Seleccionar"
+msgstr "Select"
+
+#: pialara/templates/syllabus/create_iterable.html:59
+msgid "Todos los campos deben estar llenos."
+msgstr "All fields must be filled in."
+
+#: pialara/templates/syllabus/create_iterable.html:67
+msgid "Todos los campos de frases encadenadas deben estar llenos."
+msgstr "All chained phrase fields must be filled in."
+
+#: pialara/templates/syllabus/index.html:10
+msgid "Añadir Frase"
+msgstr "Add Phrase"
+
+#: pialara/templates/syllabus/index.html:11
+msgid "Crear encadenado"
+msgstr "Create chain"
+
+#: pialara/templates/syllabus/index.html:15
+msgid "Buscar..."
+msgstr "Search..."
+
+#: pialara/templates/syllabus/index.html:16
+msgid "Buscar tag..."
+msgstr "Search tag..."
+
+#: pialara/templates/syllabus/index.html:20
+#: pialara/templates/users/index.html:20
+msgid "Buscar"
+msgstr "Search"
+
+#: pialara/templates/syllabus/index.html:35
+#: pialara/templates/users/index.html:93
+msgid "Editar"
+msgstr "Edit"
+
+#: pialara/templates/syllabus/index.html:36
+msgid "borrar texto"
+msgstr "delete text"
+
+#: pialara/templates/syllabus/index.html:36
+msgid "Eliminar"
+msgstr "Delete"
+
+#: pialara/templates/syllabus/update.html:12
+#: pialara/templates/syllabus/update.html:25
+msgid "Modificar frase"
+msgstr "Edit phrase"
+
+#: pialara/templates/users/consent.html:5
+msgid "CONSENTIMIENTO DE GRABACIÓN DE DATOS"
+msgstr "DATA RECORDING CONSENT"
+
+#: pialara/templates/users/consent.html:6
+msgid "Nombre de la aplicación"
+msgstr "Application name"
+
+#: pialara/templates/users/consent.html:7
+msgid "Nombre del responsable del tratamiento de datos"
+msgstr "Name of the data controller"
+
+#: pialara/templates/users/consent.html:7
+msgid ""
+"Conselleria de Educación, Cultura y Deporte dependiente de la Generalitat"
+" Valenciana"
+msgstr "Conselleria de Educación, Cultura y Deporte of the Generalitat Valenciana"
+
+#: pialara/templates/users/consent.html:8
+msgid "Finalidad del tratamiento de datos"
+msgstr "Purpose of data processing"
+
+#: pialara/templates/users/consent.html:8
+msgid ""
+"La aplicación PIA Lara es un proyecto para la creación de una aplicación "
+"que usará archivos de audio de forma que se facilite su entendimiento "
+"mediante el uso de inteligencia artificial. Para ello se utilizarán los "
+"audios de los usuarios/interesados en los entrenamientos, pero nunca para"
+" ser mostrados a ningún usuario ni cedidos a terceros"
+msgstr ""
+"The PIA Lara application is a project to create an application that will "
+"use audio files to facilitate understanding through the use of artificial"
+" intelligence. The audio recordings of users/participants in training "
+"sessions will be used for this purpose, but will never be shown to any "
+"user or shared with third parties"
+
+#: pialara/templates/users/consent.html:9
+msgid "Base legitimadora del tratamiento de datos"
+msgstr "Legal basis for data processing"
+
+#: pialara/templates/users/consent.html:9
+msgid ""
+"El tratamiento de datos se realiza en base al consentimiento del usuario,"
+" que se manifiesta al aceptar los términos y condiciones de la aplicación"
+" y la firma y aceptación del presente documento."
+msgstr ""
+"Data processing is based on the user's consent, which is expressed by "
+"accepting the terms and conditions of the application and by signing and "
+"accepting this document."
+
+#: pialara/templates/users/consent.html:10
+msgid "Información necesaria para el interesado"
+msgstr "Required information for the data subject"
+
+#: pialara/templates/users/consent.html:10
+msgid ""
+"Para utilizar la aplicación, el usuario debe proporcionar su nombre y "
+"apellidos. Además, se recogerá la información generada por el usuario en "
+"el uso de la aplicación, como las grabaciones de los audios y textos "
+"creados por los/as mismos/as."
+msgstr ""
+"To use the application, the user must provide their first and last name. "
+"In addition, information generated by the user while using the "
+"application will be collected, such as audio recordings and texts created"
+" by the users themselves."
+
+#: pialara/templates/users/consent.html:11
+msgid "Derechos del interesado en relación con sus datos personales"
+msgstr "Rights of the data subject regarding their personal data"
+
+#: pialara/templates/users/consent.html:11
+msgid ""
+"El usuario podrá revocar su consentimiento en cualquier momento. Además, "
+"el usuario tiene derecho a acceder, rectificar y suprimir sus datos "
+"personales, así como a limitar y oponerse al tratamiento de los mismos. "
+"También tiene derecho a la portabilidad de sus datos y a presentar una "
+"reclamación ante la autoridad de control competente."
+msgstr ""
+"The user may withdraw their consent at any time. In addition, the user "
+"has the right to access, rectify and delete their personal data, as well "
+"as to restrict and object to the processing thereof. They also have the "
+"right to data portability and to lodge a complaint with the competent "
+"supervisory authority."
+
+#: pialara/templates/users/consent.html:12
+msgid "Forma de ejercicio de los derechos del interesado"
+msgstr "How to exercise the rights of the data subject"
+
+#: pialara/templates/users/consent.html:12
+msgid ""
+"Para ejercitar sus derechos, el usuario debe enviar un correo electrónico"
+" a"
+msgstr "To exercise their rights, the user must send an email to"
+
+#: pialara/templates/users/consent.html:12
+msgid ""
+"indicando su nombre y apellidos, dirección de correo electrónico y el "
+"derecho que desea ejercitar."
+msgstr ""
+"indicating their full name, email address and the right they wish to "
+"exercise."
+
+#: pialara/templates/users/consent.html:13
+msgid ""
+"Si continúa usando la aplicación, se entiende que usted ha leído, "
+"comprende y acepta los términos anteriormente expresados."
+msgstr ""
+"By continuing to use the application, you are deemed to have read, "
+"understood and accepted the terms set out above."
+
+#: pialara/templates/users/consent.html:15
+msgid "Acepto el consentimiento"
+msgstr "I accept the consent"
+
+#: pialara/templates/users/create.html:15
+msgid "Crear usuario"
+msgstr "Create user"
+
+#: pialara/templates/users/create.html:21
+msgid "Cliente"
+msgstr "Client"
+
+#: pialara/templates/users/create.html:27
+#: pialara/templates/users/update-tech.html:19
+#: pialara/templates/users/update.html:167
+#: pialara/templates/users/update.html:287
+msgid "Técnico"
+msgstr "Technician"
+
+#: pialara/templates/users/create.html:32
+msgid "Administrador"
+msgstr "Administrator"
+
+#: pialara/templates/users/create.html:44
+#: pialara/templates/users/update.html:30
+msgid "Datos de la asociación"
+msgstr "Association details"
+
+#: pialara/templates/users/create.html:46
+#: pialara/templates/users/update.html:32
+msgid "Nombre de la Entidad"
+msgstr "Entity name"
+
+#: pialara/templates/users/create.html:50
+#: pialara/templates/users/update.html:36
+msgid "CIF"
+msgstr "CIF"
+
+#: pialara/templates/users/create.html:54
+#: pialara/templates/users/update.html:40
+msgid "Persona de referencia"
+msgstr "Reference person"
+
+#: pialara/templates/users/create.html:58
+#: pialara/templates/users/create.html:93
+#: pialara/templates/users/create.html:121
+#: pialara/templates/users/update.html:44
+#: pialara/templates/users/update.html:78
+#: pialara/templates/users/update.html:109
+msgid "Dirección"
+msgstr "Address"
+
+#: pialara/templates/users/create.html:62
+#: pialara/templates/users/create.html:97
+#: pialara/templates/users/update.html:48
+#: pialara/templates/users/update.html:82
+msgid "Teléfono"
+msgstr "Phone"
+
+#: pialara/templates/users/create.html:66
+#: pialara/templates/users/create.html:101
+#: pialara/templates/users/update.html:52
+#: pialara/templates/users/update.html:86
+msgid "Mail"
+msgstr "Email"
+
+#: pialara/templates/users/create.html:70
+#: pialara/templates/users/update.html:56
+msgid "Colectivo de atención"
+msgstr "Care group"
+
+#: pialara/templates/users/create.html:83
+#: pialara/templates/users/update.html:68
+msgid "Datos de la persona Tutor/a - Madre/Padre"
+msgstr "Guardian / Parent details"
+
+#: pialara/templates/users/create.html:85
+#: pialara/templates/users/update.html:70
+msgid "Nombre de la persona madre/padre o persona encargada"
+msgstr "Name of the parent or guardian"
+
+#: pialara/templates/users/create.html:89
+#: pialara/templates/users/create.html:113
+#: pialara/templates/users/update.html:74
+#: pialara/templates/users/update.html:98
+msgid "DNI"
+msgstr "ID number"
+
+#: pialara/templates/users/create.html:107
+#: pialara/templates/users/update.html:92
+#: pialara/templates/users/update.html:218
+msgid "Datos de la persona"
+msgstr "Person details"
+
+#: pialara/templates/users/create.html:107
+#: pialara/templates/users/update.html:92
+#: pialara/templates/users/update.html:218
+msgid "Donante de voz"
+msgstr "Voice donor"
+
+#: pialara/templates/users/create.html:109
+#: pialara/templates/users/update.html:94
+#: pialara/templates/users/update.html:220
+msgid "Nombre y Apellidos"
+msgstr "Full name"
+
+#: pialara/templates/users/create.html:117
+#: pialara/templates/users/update-admin.html:45
+#: pialara/templates/users/update-tecnico.html:47
+#: pialara/templates/users/update.html:104
+#: pialara/templates/users/update.html:226
+msgid "Fecha de nacimiento"
+msgstr "Date of birth"
+
+#: pialara/templates/users/create.html:125
+#: pialara/templates/users/update.html:113
+msgid "Localidad"
+msgstr "City"
+
+#: pialara/templates/users/create.html:129
+#: pialara/templates/users/update.html:117
+#: pialara/templates/users/update.html:230
+msgid "Provincia"
+msgstr "Province"
+
+#: pialara/templates/users/create.html:131
+msgid "Álava"
+msgstr "Álava"
+
+#: pialara/templates/users/create.html:132
+msgid "Albacete"
+msgstr "Albacete"
+
+#: pialara/templates/users/create.html:133
+msgid "Alicante"
+msgstr "Alicante"
+
+#: pialara/templates/users/create.html:134
+msgid "Almería"
+msgstr "Almería"
+
+#: pialara/templates/users/create.html:135
+msgid "Asturias"
+msgstr "Asturias"
+
+#: pialara/templates/users/create.html:136
+msgid "Ávila"
+msgstr "Ávila"
+
+#: pialara/templates/users/create.html:137
+msgid "Badajoz"
+msgstr "Badajoz"
+
+#: pialara/templates/users/create.html:138
+msgid "Barcelona"
+msgstr "Barcelona"
+
+#: pialara/templates/users/create.html:139
+msgid "Burgos"
+msgstr "Burgos"
+
+#: pialara/templates/users/create.html:140
+msgid "Cáceres"
+msgstr "Cáceres"
+
+#: pialara/templates/users/create.html:141
+msgid "Cádiz"
+msgstr "Cádiz"
+
+#: pialara/templates/users/create.html:142
+msgid "Cantabria"
+msgstr "Cantabria"
+
+#: pialara/templates/users/create.html:143
+msgid "Castellón"
+msgstr "Castellón"
+
+#: pialara/templates/users/create.html:144
+msgid "Ciudad Real"
+msgstr "Ciudad Real"
+
+#: pialara/templates/users/create.html:145
+msgid "Córdoba"
+msgstr "Córdoba"
+
+#: pialara/templates/users/create.html:146
+msgid "Cuenca"
+msgstr "Cuenca"
+
+#: pialara/templates/users/create.html:147
+msgid "Girona"
+msgstr "Girona"
+
+#: pialara/templates/users/create.html:148
+msgid "Granada"
+msgstr "Granada"
+
+#: pialara/templates/users/create.html:149
+msgid "Guadalajara"
+msgstr "Guadalajara"
+
+#: pialara/templates/users/create.html:150
+msgid "Guipúzcoa"
+msgstr "Guipúzcoa"
+
+#: pialara/templates/users/create.html:151
+msgid "Huelva"
+msgstr "Huelva"
+
+#: pialara/templates/users/create.html:152
+msgid "Huesca"
+msgstr "Huesca"
+
+#: pialara/templates/users/create.html:153
+msgid "Islas Baleares"
+msgstr "Balearic Islands"
+
+#: pialara/templates/users/create.html:154
+msgid "Jaén"
+msgstr "Jaén"
+
+#: pialara/templates/users/create.html:155
+msgid "La Coruña"
+msgstr "La Coruña"
+
+#: pialara/templates/users/create.html:156
+msgid "La Rioja"
+msgstr "La Rioja"
+
+#: pialara/templates/users/create.html:157
+msgid "Las Palmas"
+msgstr "Las Palmas"
+
+#: pialara/templates/users/create.html:158
+msgid "León"
+msgstr "León"
+
+#: pialara/templates/users/create.html:159
+msgid "Lleida"
+msgstr "Lleida"
+
+#: pialara/templates/users/create.html:160
+msgid "Lugo"
+msgstr "Lugo"
+
+#: pialara/templates/users/create.html:161
+msgid "Madrid"
+msgstr "Madrid"
+
+#: pialara/templates/users/create.html:162
+msgid "Málaga"
+msgstr "Málaga"
+
+#: pialara/templates/users/create.html:163
+msgid "Murcia"
+msgstr "Murcia"
+
+#: pialara/templates/users/create.html:164
+msgid "Navarra"
+msgstr "Navarra"
+
+#: pialara/templates/users/create.html:165
+msgid "Ourense"
+msgstr "Ourense"
+
+#: pialara/templates/users/create.html:166
+msgid "Palencia"
+msgstr "Palencia"
+
+#: pialara/templates/users/create.html:167
+msgid "Pontevedra"
+msgstr "Pontevedra"
+
+#: pialara/templates/users/create.html:168
+msgid "Salamanca"
+msgstr "Salamanca"
+
+#: pialara/templates/users/create.html:169
+msgid "Santa Cruz de Tenerife"
+msgstr "Santa Cruz de Tenerife"
+
+#: pialara/templates/users/create.html:170
+msgid "Segovia"
+msgstr "Segovia"
+
+#: pialara/templates/users/create.html:171
+msgid "Sevilla"
+msgstr "Seville"
+
+#: pialara/templates/users/create.html:172
+msgid "Soria"
+msgstr "Soria"
+
+#: pialara/templates/users/create.html:173
+msgid "Tarragona"
+msgstr "Tarragona"
+
+#: pialara/templates/users/create.html:174
+msgid "Teruel"
+msgstr "Teruel"
+
+#: pialara/templates/users/create.html:175
+msgid "Toledo"
+msgstr "Toledo"
+
+#: pialara/templates/users/create.html:176
+msgid "Valencia"
+msgstr "Valencia"
+
+#: pialara/templates/users/create.html:177
+msgid "Valladolid"
+msgstr "Valladolid"
+
+#: pialara/templates/users/create.html:178
+msgid "Vizcaya"
+msgstr "Vizcaya"
+
+#: pialara/templates/users/create.html:179
+msgid "Zamora"
+msgstr "Zamora"
+
+#: pialara/templates/users/create.html:180
+msgid "Zaragoza"
+msgstr "Zaragoza"
+
+#: pialara/templates/users/create.html:185
+#: pialara/templates/users/update-admin.html:34
+#: pialara/templates/users/update-tecnico.html:36
+#: pialara/templates/users/update.html:128
+#: pialara/templates/users/update.html:241
+msgid "Sexo"
+msgstr "Gender"
+
+#: pialara/templates/users/create.html:187
+#: pialara/templates/users/index.html:39
+#: pialara/templates/users/update-admin.html:36
+#: pialara/templates/users/update-tecnico.html:38
+#: pialara/templates/users/update.html:130
+#: pialara/templates/users/update.html:243
+msgid "Hombre"
+msgstr "Male"
+
+#: pialara/templates/users/create.html:188
+#: pialara/templates/users/index.html:41
+#: pialara/templates/users/update-admin.html:37
+#: pialara/templates/users/update-tecnico.html:39
+#: pialara/templates/users/update.html:131
+#: pialara/templates/users/update.html:244
+msgid "Mujer"
+msgstr "Female"
+
+#: pialara/templates/users/create.html:189
+#: pialara/templates/users/index.html:43
+#: pialara/templates/users/update-admin.html:38
+#: pialara/templates/users/update-tecnico.html:40
+#: pialara/templates/users/update.html:132
+#: pialara/templates/users/update.html:245
+msgid "Ambiguo"
+msgstr "Non-binary"
+
+#: pialara/templates/users/create.html:190
+#: pialara/templates/users/index.html:45
+#: pialara/templates/users/update-admin.html:39
+#: pialara/templates/users/update-tecnico.html:41
+#: pialara/templates/users/update.html:133
+#: pialara/templates/users/update.html:246
+msgid "Trans"
+msgstr "Trans"
+
+#: pialara/templates/users/create.html:195
+#: pialara/templates/users/update.html:139
+#: pialara/templates/users/update.html:263
+msgid "Tipo de trastornos del habla"
+msgstr "Type of speech disorders"
+
+#: pialara/templates/users/create.html:206
+#: pialara/templates/users/update.html:151
+msgid "Grado de afectación"
+msgstr "Severity level"
+
+#: pialara/templates/users/create.html:208
+#: pialara/templates/users/update.html:153
+msgid "Leve"
+msgstr "Mild"
+
+#: pialara/templates/users/create.html:209
+#: pialara/templates/users/update.html:154
+msgid "Moderado"
+msgstr "Moderate"
+
+#: pialara/templates/users/create.html:210
+#: pialara/templates/users/update.html:155
+msgid "Severo"
+msgstr "Severe"
+
+#: pialara/templates/users/create.html:216
+msgid "Datos de inicio de sesión"
+msgstr "Login details"
+
+#: pialara/templates/users/create.html:218
+#: pialara/templates/users/create.html:252
+#: pialara/templates/users/create.html:281
+#: pialara/templates/users/update-admin.html:30
+#: pialara/templates/users/update-tecnico.html:32
+#: pialara/templates/users/update.html:163
+#: pialara/templates/users/update.html:279
+msgid "Email"
+msgstr "Email"
+
+#: pialara/templates/users/create.html:224
+#: pialara/templates/users/create.html:258
+#: pialara/templates/users/create.html:287
+#: pialara/templates/users/update-pass.html:32
+#: pialara/templates/users/update-pass.html:42
+msgid "Introduce la contraseña."
+msgstr "Enter the password."
+
+#: pialara/templates/users/create.html:227
+#: pialara/templates/users/create.html:261
+#: pialara/templates/users/create.html:290
+msgid "Repetir contraseña"
+msgstr "Repeat password"
+
+#: pialara/templates/users/create.html:229
+#: pialara/templates/users/create.html:263
+#: pialara/templates/users/create.html:292
+#: pialara/templates/users/update-pass.html:48
+msgid "Las contraseñas deben coincidir."
+msgstr "Passwords must match."
+
+#: pialara/templates/users/create.html:232
+#: pialara/templates/users/update-admin.html:55
+#: pialara/templates/users/update-tecnico.html:57
+#: pialara/templates/users/update.html:183
+#: pialara/templates/users/update.html:303
+msgid "Observaciones"
+msgstr "Notes"
+
+#: pialara/templates/users/create.html:240
+msgid "Crear cliente"
+msgstr "Create client"
+
+#: pialara/templates/users/create.html:248
+#: pialara/templates/users/create.html:277
+#: pialara/templates/users/update-admin.html:26
+#: pialara/templates/users/update-tecnico.html:28
+msgid "Nombre"
+msgstr "Name"
+
+#: pialara/templates/users/create.html:267
+msgid "Crear técnico"
+msgstr "Create technician"
+
+#: pialara/templates/users/create.html:296
+msgid "Crear administrador"
+msgstr "Create administrator"
+
+#: pialara/templates/users/index.html:5
+msgid "Lista de usuarios"
+msgstr "User list"
+
+#: pialara/templates/users/index.html:8
+msgid "Añadir Usuario"
+msgstr "Add User"
+
+#: pialara/templates/users/index.html:12
+msgid "Mostrar Inactivos"
+msgstr "Show Inactive"
+
+#: pialara/templates/users/index.html:18
+msgid "Buscar usuarios..."
+msgstr "Search users..."
+
+#: pialara/templates/users/index.html:97
+msgid "Informe"
+msgstr "Report"
+
+#: pialara/templates/users/update-admin.html:16
+#: pialara/templates/users/update-admin.html:84
+#: pialara/templates/users/update-pass.html:16
+#: pialara/templates/users/update-tecnico.html:16
+#: pialara/templates/users/update-tecnico.html:87
+#: pialara/templates/users/update.html:16
+#: pialara/templates/users/update.html:336
+msgid "Volver"
+msgstr "Back"
+
+#: pialara/templates/users/update-admin.html:20
+msgid "administrador"
+msgstr "administrator"
+
+#: pialara/templates/users/update-admin.html:21
+msgid "Actualizar administrador"
+msgstr "Update administrator"
+
+#: pialara/templates/users/update-admin.html:50
+#: pialara/templates/users/update-tecnico.html:52
+#: pialara/templates/users/update.html:283
+msgid "Entidad / Asociación"
+msgstr "Entity / Association"
+
+#: pialara/templates/users/update-admin.html:61
+#: pialara/templates/users/update-tecnico.html:63
+#: pialara/templates/users/update.html:189
+#: pialara/templates/users/update.html:309
+msgid "Cambiar Contraseña"
+msgstr "Change Password"
+
+#: pialara/templates/users/update-admin.html:66
+#: pialara/templates/users/update-tecnico.html:68
+#: pialara/templates/users/update.html:194
+#: pialara/templates/users/update.html:314
+msgid "Tamaño de texto"
+msgstr "Text size"
+
+#: pialara/templates/users/update-admin.html:74
+#: pialara/templates/users/update-tecnico.html:76
+#: pialara/templates/users/update.html:201
+#: pialara/templates/users/update.html:321
+msgid "Texto de ejemplo"
+msgstr "Sample text"
+
+#: pialara/templates/users/update-admin.html:78
+#: pialara/templates/users/update-pass.html:55
+#: pialara/templates/users/update-tech.html:29
+#: pialara/templates/users/update-tecnico.html:80
+#: pialara/templates/users/update.html:209
+#: pialara/templates/users/update.html:329
+msgid "Actualizar"
+msgstr "Update"
+
+#: pialara/templates/users/update-pass.html:20
+msgid "contraseña"
+msgstr "password"
+
+#: pialara/templates/users/update-pass.html:21
+msgid "Cambiar contraseña"
+msgstr "Change password"
+
+#: pialara/templates/users/update-pass.html:46
+msgid "Repetir Contraseña"
+msgstr "Repeat Password"
+
+#: pialara/templates/users/update-tech.html:15
+msgid "Actualizar Técnico"
+msgstr "Update Technician"
+
+#: pialara/templates/users/update-tecnico.html:20
+msgid "auricular"
+msgstr "headset"
+
+#: pialara/templates/users/update-tecnico.html:21
+msgid "Actualizar técnico"
+msgstr "Update technician"
+
+#: pialara/templates/users/update.html:20
+msgid "microfono"
+msgstr "microphone"
+
+#: pialara/templates/users/update.html:21
+msgid "Actualizar cliente"
+msgstr "Update client"
+
+#: pialara/templates/users/update.html:161
+#: pialara/templates/users/update.html:277
+msgid "Información técnica"
+msgstr "Technical information"
+
+#: pialara/templates/users/update.html:177
+#: pialara/templates/users/update.html:297
+msgid "Activo"
+msgstr "Active"
+
+#: pialara/templates/users/update.html:186
+#: pialara/templates/users/update.html:306
+msgid "Preferencias"
+msgstr "Preferences"
+
+#: pialara/templates/users/update.html:252
+msgid "Enfermedades"
+msgstr "Conditions"
+
+

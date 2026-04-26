@@ -4,6 +4,7 @@ import random
 from bson.objectid import ObjectId
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required
+from flask_babel import _
 
 from pialara.models.Syllabus import Syllabus
 from pialara.models.Usuario import Usuario
@@ -15,10 +16,10 @@ bp = Blueprint("syllabus", __name__, url_prefix="/syllabus")
 def _get_momento_dia():
     hora = datetime.now().hour
     if 6 <= hora < 12:
-        return "mañana"
+        return _("mañana")
     elif 12 <= hora < 20:
-        return "tarde"
-    return "noche"
+        return _("tarde")
+    return _("noche")
 
 
 def _get_frase_sugerida(syllabus, ubicacion):
@@ -128,10 +129,10 @@ def index():
     pages_max = min([total_pages, pages_min + 5])
 
     if not documentos.alive:
-        flash(
+        flash(_(
             "No se han encontrado resultados",
             "danger",
-        )
+        ))
 
     # Guardamos el click
     clicks = Clicks()
@@ -175,7 +176,7 @@ def frase_aleatoria():
     syllabus = Syllabus()
     frase = _get_frase_sugerida(syllabus, ubicacion)
     if not frase:
-        return jsonify({"error": "No hay frases disponibles"}), 404
+        return jsonify({"error": _("No hay frases disponibles")}), 404
     return jsonify({
         "texto": frase.get("texto", ""),
         "tags": frase.get("tags", []),
@@ -222,10 +223,10 @@ def create_post():
 
     # Comprobar el resultado y mostrar mensaje
     if result.acknowledged:
-        flash("Texto creado correctamente", "success")
+        flash(_("Texto creado correctamente"), "success")
         return redirect(url_for("syllabus.index"))
     else:
-        flash("La frase no se ha creado. Error genérico", "danger")
+        flash(_("La frase no se ha creado. Error genérico"), "danger")
         return redirect(url_for("syllabus.create"))
 
 @bp.route("/create_iterable")
@@ -239,7 +240,7 @@ def create_iterable_post():
     # Obtener los datos del formulario
     tags = request.form.get('ftags')
     if not tags or tags.strip() == "":
-        flash('El campo de etiquetas no puede estar vacío.', 'danger')
+        flash(_('El campo de etiquetas no puede estar vacío.'), "danger")
         return redirect(url_for('syllabus.create_iterable'))
 
     
@@ -303,10 +304,10 @@ def create_iterable_post():
                 id_insertado = result.inserted_id           
                 print("Frase ", text, "ID ", id_insertado)
     
-        flash("Iterable creado correctamente", "success")
+        flash(_("Iterable creado correctamente"), "success")
         return redirect(url_for("syllabus.index"))
     else:
-        flash("Campos erroneos!", "danger")
+        flash(_("Campos erroneos!"), "danger")
         return render_template("syllabus/create_iterable.html")
     
 
@@ -351,13 +352,13 @@ def update_post(id):
 
     # Comprobar el resultado y mostrar mensaje
     if result.acknowledged & result.modified_count == 1:
-        flash("Texto actualizado correctamente", "success")
+        flash(_("Texto actualizado correctamente"), "success")
         return redirect(url_for("syllabus.index"))
     elif result.acknowledged & result.modified_count == 0:
-        flash("Error al actualizar texto, inténtelo de nuevo...", "danger")
+        flash(_("Error al actualizar texto, inténtelo de nuevo..."), "danger")
         return redirect(url_for("syllabus.update", id=fraseID))
     else:
-        flash("La frase no se ha actualizado. Error genérico", "danger")
+        flash(_("La frase no se ha actualizado. Error genérico"), "danger")
         return redirect(url_for("syllabus.index"))
 
 
@@ -368,8 +369,8 @@ def delete(id):
     params = {"_id": ObjectId(id)}
     result = frase.delete_one(params)
     if result.acknowledged:
-        flash("Frase eliminada correctamente", "success")
+        flash(_("Frase eliminada correctamente"), "success")
         return redirect(url_for("syllabus.index"))
     else:
-        flash("La frase no se ha eliminado. Error genérico", "danger")
+        flash(_("La frase no se ha eliminado. Error genérico"), "danger")
         return redirect(url_for("syllabus.index"))

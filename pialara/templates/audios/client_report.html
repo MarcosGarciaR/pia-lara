@@ -3,11 +3,11 @@
 {% block content %}
 <header class="header text-center my-4">
     {% if rol == 'admin' %}
-    <h1>Resumen de Audios de {{cliente_nombre}} </h1>
+    <h1>{{ _('Resumen de Audios de') }} {{cliente_nombre}} </h1>
     {% elif rol == 'tecnico' %}
-    <h1>Resumen de Audios de {{cliente_nombre}} </h1>
+    <h1>{{ _('Resumen de Audios de') }} {{cliente_nombre}} </h1>
    {% elif rol == 'cliente' %}
-   <h1>Mi resumen de audios</h1>
+   <h1>{{ _('Mi resumen de audios') }}</h1>
    {% endif %}
         </header>
 
@@ -18,7 +18,7 @@
             <div class="card border-dark shadow-sm h-100">
                 <div class="card-body d-flex justify-content-between align-items-center p-3">
                     <div>
-                        <h6 class="text-secondary text-uppercase mb-0">Total Audios</h6>
+                        <h6 class="text-secondary text-uppercase mb-0">{{ _('Total Audios') }}</h6>
                         <span class="fs-2 fw-bold text-dark lh-1">{{ total_audios }}</span>
                     </div>
                     <i class="bi bi-mic-fill fs-2 text-secondary opacity-25"></i>
@@ -29,7 +29,7 @@
             <div class="card border-secondary shadow-sm h-100">
                 <div class="card-body d-flex justify-content-between align-items-center p-3">
                     <div>
-                        <h6 class="text-secondary text-uppercase mb-0">Fonemas Únicos</h6>
+                        <h6 class="text-secondary text-uppercase mb-0">{{ _('Fonemas Únicos') }}</h6>
                         <span class="fs-2 fw-bold text-dark lh-1">{{ total_fonemas_unicos }}</span>
                     </div>
                     <i class="bi bi-soundwave fs-2 text-secondary opacity-25"></i>
@@ -40,13 +40,13 @@
 
     <div class="row g-2 mb-3 h-auto" style="height: auto !important;">
         <div class="col-12">
-            <h6 class="border-bottom pb-1 mb-2 text-dark fw-bold"><i class="bi bi-tags-fill me-2"></i>Etiquetas</h6>
+            <h6 class="border-bottom pb-1 mb-2 text-dark fw-bold"><i class="bi bi-tags-fill me-2"></i>{{ _('Etiquetas') }}</h6>
         </div>
         
         <div class="col-lg-4 col-md-6 mb-2">
             <div class="card border-0 bg-light shadow-sm h-100">
                 <div class="card-header bg-dark text-white text-center py-1">
-                    <small class="fw-bold text-uppercase">Últimas</small>
+                    <small class="fw-bold text-uppercase">{{ _('Últimas') }}</small>
                 </div>
                 <ul class="list-group list-group-flush bg-transparent">
                     {% for item in ultimas_tags_grabadas %}
@@ -54,7 +54,7 @@
                         <span class="fw-bold text-dark m-auto">{{ item.tag }}</span>
                     </li>
                     {% else %}
-                    <li class="list-group-item bg-transparent text-center text-muted py-1"><small>Sin datos</small></li>
+                    <li class="list-group-item bg-transparent text-center text-muted py-1"><small>{{ _('Sin datos') }}</small></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -63,7 +63,7 @@
         <div class="col-lg-4 col-md-6 mb-2">
             <div class="card border-secondary shadow-sm h-100">
                 <div class="card-header bg-white border-bottom border-dark text-center py-1">
-                    <small class="fw-bold text-uppercase text-dark" >Más Frecuentes</small>
+                    <small class="fw-bold text-uppercase text-dark" >{{ _('Más Frecuentes') }}</small>
                 </div>
                 <ul class="list-group list-group-flush">
                     {% for item in mas_grabadas %}
@@ -79,7 +79,7 @@
         <div class="col-lg-4 col-md-6 mb-2">
             <div class="card border-secondary shadow-sm h-100">
                 <div class="card-header bg-white border-bottom border-secondary text-center py-1">
-                    <small class="fw-bold text-uppercase text-secondary">Menos Frecuentes</small>
+                    <small class="fw-bold text-uppercase text-secondary">{{ _('Menos Frecuentes') }}</small>
                 </div>
                 <ul class="list-group list-group-flush">
                     {% for item in menos_grabadas %}
@@ -95,13 +95,13 @@
 
     <div class="row g-2 mb-3 h-auto" style="height: auto !important;">
         <div class="col-12">
-            <h6 class="border-bottom pb-1 mb-2 text-dark fw-bold"><i class="bi bi-mic-fill me-2"></i>Fonemas</h6>
+            <h6 class="border-bottom pb-1 mb-2 text-dark fw-bold"><i class="bi bi-mic-fill me-2"></i>{{ _('Fonemas') }}</h6>
         </div>
         
         <div class="col-lg-4 col-md-6 mb-2">
             <div class="card border-0 bg-light shadow-sm h-100">
                 <div class="card-header bg-secondary text-white text-center py-1">
-                    <small class="fw-bold text-uppercase">Últimos</small>
+                    <small class="fw-bold text-uppercase">{{ _('Últimos') }}</small>
                 </div>
                 <ul class="list-group list-group-flush bg-transparent">
                     {% for item in ultimos_fonemas %}
@@ -109,7 +109,7 @@
                         <span class="fw-bold text-dark text-uppercase m-auto">{{ item.fonema }}</span>
                     </li>
                     {% else %}
-                    <li class="list-group-item bg-transparent text-center text-muted py-1"><small>Sin datos</small></li>
+                    <li class="list-group-item bg-transparent text-center text-muted py-1"><small>{{ _('Sin datos') }}</small></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -118,7 +118,7 @@
         <div class="col-lg-4 col-md-6 mb-2">
             <div class="card border-secondary shadow-sm h-100">
                 <div class="card-header bg-white border-bottom border-dark text-center py-1">
-                    <small class="fw-bold text-uppercase text-dark">Más Practicados</small>
+                    <small class="fw-bold text-uppercase text-dark">{{ _('Más Practicados') }}</small>
                 </div>
                 <ul class="list-group list-group-flush">
                     {% for item in fonemas_mas_grabados %}
@@ -134,7 +134,7 @@
         <div class="col-lg-4 col-md-6 mb-2">
             <div class="card border-secondary shadow-sm h-100">
                 <div class="card-header bg-white border-bottom border-secondary text-center py-1">
-                    <small class="fw-bold text-uppercase text-secondary">Menos Practicados</small>
+                    <small class="fw-bold text-uppercase text-secondary">{{ _('Menos Practicados') }}</small>
                 </div>
                 <ul class="list-group list-group-flush">
                     {% for item in fonemas_menos_grabados %}
@@ -150,13 +150,13 @@
 
     <div class="card border-secondary shadow-sm h-auto" style="height: auto !important;">
         <div class="card-body p-2">
-            <h6 class="text-center mb-2 fw-bold">Audios por Categoría</h6>
+            <h6 class="text-center mb-2 fw-bold">{{ _('Audios por Categoría') }}</h6>
             <div class="table-responsive">
                 <table class="table table-sm table-striped table-hover mb-0" id="categorias-tabla">
                     <thead class="table-dark text-center">
                         <tr>
-                            <th onclick="ordenarTabla(0)" style="cursor:pointer;">Categoría <i class="bi bi-sort-down"></i></th>
-                            <th onclick="ordenarTabla(1)" style="cursor:pointer;">Cantidad <i class="bi bi-sort-down"></i></th>
+                            <th onclick="ordenarTabla(0)" style="cursor:pointer;">{{ _('Categoría') }} <i class="bi bi-sort-down"></i></th>
+                            <th onclick="ordenarTabla(1)" style="cursor:pointer;">{{ _('Cantidad') }} <i class="bi bi-sort-down"></i></th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
@@ -175,32 +175,33 @@
     <!-- Sección de Insignias y Progreso -->
     {% if rol == 'cliente' %}
     <div class="mt-4 pt-3 border-top">
-        <h6 class="text-center mb-3 fw-bold text-primary small text-uppercase" style="letter-spacing: 1px;"><i class="bi bi-award-fill me-2"></i>Mis Insignias</h6>
+        <h6 class="text-center mb-3 fw-bold text-primary small text-uppercase" style="letter-spacing: 1px;">
+            <i class="bi bi-award-fill me-2"></i>{{ _('Mis Insignias') }}</h6>
         
         <!-- Barra de progreso general -->
-        <div class="card shadow-sm mb-4 border-0 bg-light">
+                <div class="card shadow-sm mb-4 border-0 bg-light">
             <div class="card-body">
                 {% if next_badge %}
                 <div class="d-flex justify-content-between mb-1">
-                    <span class="small fw-bold">Siguiente nivel: {{ next_badge.name }}</span>
-                    <span class="small text-muted">{{ total_audios }} / {{ next_badge.limit }} audios</span>
+                    <span class="small fw-bold">{{ _('Siguiente nivel') }}: {{ _(next_badge.name) }}</span>
+                    <span class="small text-muted">{{ total_audios }} / {{ next_badge.limit }} {{ _('audios') }}</span>
                 </div>
                 <div class="progress" style="height: 20px; border-radius: 10px;">
                     {% set progress_percentage = (total_audios / next_badge.limit * 100)|round|int %}
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
-                         role="progressbar" 
-                         style="width: {{ progress_percentage if progress_percentage <= 100 else 100 }}%" 
-                         aria-valuenow="{{ total_audios }}" 
-                         aria-valuemin="0" 
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                         role="progressbar"
+                         style="width: {{ progress_percentage if progress_percentage <= 100 else 100 }}%"
+                         aria-valuenow="{{ total_audios }}"
+                         aria-valuemin="0"
                          aria-valuemax="{{ next_badge.limit }}">
                          {{ progress_percentage }}%
                     </div>
                 </div>
-                <p class="text-center mt-2 small text-muted">¡Te faltan {{ next_badge.limit - total_audios }} audios para tu próxima insignia!</p>
+                <p class="text-center mt-2 small text-muted">{{ _('¡Te faltan') }} {{ next_badge.limit - total_audios }} {{ _('audios para tu próxima insignia!') }}</p>
                 {% else %}
                 <div class="text-center py-2">
-                    <span class="badge bg-success fs-6"><i class="bi bi-star-fill me-1"></i>¡Has alcanzado el nivel máximo!</span>
-                    <p class="mt-2 mb-0 fw-bold">{{ total_audios }} audios grabados</p>
+                    <span class="badge bg-success fs-6"><i class="bi bi-star-fill me-1"></i>{{ _('¡Has alcanzado el nivel máximo!') }}</span>
+                    <p class="mt-2 mb-0 fw-bold">{{ total_audios }} {{ _('audios grabados') }}</p>
                 </div>
                 {% endif %}
 
@@ -208,20 +209,16 @@
                 <div class="d-flex justify-content-center align-items-stretch gap-1 flex-wrap flex-md-nowrap text-center mt-3 pt-3 border-top">
                     {% for badge in badges_info %}
                     <div class="badge-item-container p-1 rounded {% if badge.unlocked %}unlocked cursor-pointer{% else %}locked opacity-40{% endif %}"
-                        {% if badge.unlocked %}
-                            onclick="seleccionarInsignia('{{ badge.image }}')"
-                        {% endif %}
+                        {% if badge.unlocked %}onclick="seleccionarInsignia('{{ badge.image }}')"{% endif %}
                         style="flex: 1; min-width: 70px; max-width: 100px; transition: all 0.2s; position: relative; {% if badge.is_selected %}background: rgba(13, 110, 253, 0.1); border: 1px solid rgba(13, 110, 253, 0.3);{% endif %}"
-                        {% if badge.unlocked %}
-                            onmouseover="this.style.backgroundColor='rgba(0,0,0,0.05)'"
-                        {% endif %}
+                        {% if badge.unlocked %}onmouseover="this.style.backgroundColor='rgba(0,0,0,0.05)'"{% endif %}
                         onmouseout="this.style.backgroundColor='{% if badge.is_selected %}rgba(13, 110, 253, 0.1){% else %}transparent{% endif %}'">
                         <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                            <img src="{{ url_for('static', filename='img/badges/' + badge.image) }}" 
-                                 alt="{{ badge.name }}" 
+                            <img src="{{ url_for('static', filename='img/badges/' + badge.image) }}"
+                                 alt="{{ _(badge.name) }}"
                                  class="mb-1 {% if not badge.unlocked %}grayscale{% endif %}"
                                  style="height: 30px; width: auto;">
-                            <div class="fw-bold mb-0 {% if badge.unlocked %}text-dark{% else %}text-muted{% endif %}" style="font-size: 0.6rem; line-height: 1;">{{ badge.name }}</div>
+                            <div class="fw-bold mb-0 {% if badge.unlocked %}text-dark{% else %}text-muted{% endif %}" style="font-size: 0.6rem; line-height: 1;">{{ _(badge.name) }}</div>
                             <div class="text-muted" style="font-size: 0.5rem;">{{ badge.limit }}</div>
                             {% if badge.is_selected %}
                             <div class="bg-primary rounded-circle" style="width: 6px; height: 6px; position: absolute; top: 2px; right: 2px;"></div>

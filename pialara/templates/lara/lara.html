@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ get_locale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habla con Lara</title>
+    <title>{{ _('Habla con Lara') }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="{{ url_for('static',filename='styles/styleLara.css') }}" rel="stylesheet" type="text/css">
@@ -13,28 +13,28 @@
     <div class="card text-center">
         <div class="card-body">
             <div class="text-center mb-4">
-                <img src="{{ url_for('static',filename='img/logoLara.png') }}" alt="Logo de Lara" style="width: 150px;">
+                <img src="{{ url_for('static',filename='img/logoLara.png') }}" alt="{{ _('Logo de Lara') }}" style="width: 150px;">
             </div>
-            <h1 class="card-title mb-4">Habla con Lara</h1>
+            <h1 class="card-title mb-4">{{ _('Habla con Lara') }}</h1>
             
-            <button id="recordButton" class="btn btn-custom mb-3">Comenzar Grabación</button>
+            <button id="recordButton" class="btn btn-custom mb-3">{{ _('Comenzar Grabación') }}</button>
             <div id="visualizer">
                 <canvas id="canvas"></canvas>
             </div>
             <div class="mb-4 d-flex justify-content-center">
                 <select class="form-select w-70" id="modelSelect">
-                    <option value="" selected>Selecciona un modelo</option>
-                    <option value="1">Modelo 1</option>
-                    <option value="2">Modelo 2</option>
-                    <option value="3">Modelo 3</option>
-                    <option value="4">Modelo 4</option>
+                    <option value="" selected>{{ _('Selecciona un modelo') }}</option>
+                    <option value="1">{{ _('Modelo 1') }}</option>
+                    <option value="2">{{ _('Modelo 2') }}</option>
+                    <option value="3">{{ _('Modelo 3') }}</option>
+                    <option value="4">{{ _('Modelo 4') }}</option>
                 </select>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-4">
-                <button id="sendRecording" class="btn btn-success btn-custom mb-2" disabled>Enviar</button>
+                <button id="sendRecording" class="btn btn-success btn-custom mb-2" disabled>{{ _('Enviar') }}</button>
                 <div id="spinner" class="spinner-border text-primary ms-3" role="status" style="display: none;">
-                    <span class="visually-hidden">Cargando...</span>
+                    <span class="visually-hidden">{{ _('Cargando...') }}</span>
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
                 <div id="status" class="alert alert-info w-40 text-center" role="alert" style="display: none;padding: 10px;"></div>
             </div>
 
-            <h3 class="card-title mb-2" style="margin-top: 5px;">Transcripción:</h3>
+            <h3 class="card-title mb-2" style="margin-top: 5px;">{{ _('Transcripción:') }}</h3>
 
             <div class="transcription-box">
                 <span id="transcription" style="font-size: 25px;"></span>
@@ -50,7 +50,7 @@
         </div>
 
     <div class="statusContainer">
-        <h3>¿Cómo fue tu experiencia?</h3>
+        <h3>{{ _('¿Cómo fue tu experiencia?') }}</h3>
         <p id="response-message"></p>
         <div class="buttons-container">
             <button id="happyBtn" class="emotion-button happy" onclick="submitFeedback('happy')" disabled>
@@ -62,7 +62,6 @@
             <button id="sadBtn" class="emotion-button sad" onclick="submitFeedback('sad')" disabled>
                 <span class="emotion-face">&#x1F641;</span> <!-- Cara triste -->
             </button>
-            
         </div>
     </div>
 </div>

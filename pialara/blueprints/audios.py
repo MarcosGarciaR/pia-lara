@@ -12,6 +12,7 @@ from flask import (
     Blueprint, flash, redirect, render_template, request, url_for, jsonify, session
 )
 from flask_login import login_required, current_user
+from flask_babel import _
 from werkzeug.utils import secure_filename
 
 from pialara.models.Audios import Audios
@@ -28,12 +29,12 @@ from random import sample
 
 bp = Blueprint('audios', __name__, url_prefix='/audios')
 BADGES_THRESHOLDS = [
-    {"limit": 10, "name": "Principiante", "image": "badge_10.png"},
-    {"limit": 25, "name": "Avanzado", "image": "badge_25.png"},
-    {"limit": 50, "name": "Especialista", "image": "badge_50.png"},
-    {"limit": 100, "name": "Profesional", "image": "badge_100.png"},
-    {"limit": 200, "name": "Experto", "image": "badge_200.png"},
-    {"limit": 500, "name": "Leyenda", "image": "badge_500.png"},
+    {"limit": 10,  "name": "Principiante", "image": "badge_10.png"},
+    {"limit": 25,  "name": "Avanzado",     "image": "badge_25.png"},
+    {"limit": 50,  "name": "Especialista", "image": "badge_50.png"},
+    {"limit": 100, "name": "Profesional",  "image": "badge_100.png"},
+    {"limit": 200, "name": "Experto",      "image": "badge_200.png"},
+    {"limit": 500, "name": "Leyenda",      "image": "badge_500.png"},
 ]
 
 @bp.app_context_processor
@@ -70,7 +71,7 @@ def inject_badges():
     
     # Si sigue sin haber insignia (0 audios), o la cuenta es nueva, mostramos la por defecto
     if not current_badge:
-        current_badge = {"limit": 0, "name": "Novato", "image": "default.png"}
+        current_badge = {"limit": 0, "name": _("Novato"), "image": "default.png"}
             
     return dict(current_badge=current_badge, total_count=total_count)
 
@@ -337,7 +338,7 @@ def client_record(tag_name):
     # Obtenemos las frases que coinciden con la etiqueta
     syllabus_items = list(syllabus.aggregate(pipeline))
     if not syllabus_items:
-        flash(f"No se han encontrado frases con la etiqueta '{tag_name}'", "danger")
+        flash(_(f"No se han encontrado frases con la etiqueta '%(tag)s'", tag=tag_name), "danger")
         return redirect(url_for('audios.client_tag'))
     
     next_syllabus_item = _get_next_syllabus_item(syllabus, syllabus_items, tag_name)
@@ -374,7 +375,15 @@ def save_record():
     filename = str(current_user.id) + '_' + str(timestamp) + '.wav'
 
     # # Guardado en S3
-
+    
+    s3c = boto3.client(
+        's3',
+        region_name='eu-south-2',
+        aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=current_app.config['AWS_SECRET_ACCESS_KEY'],
+        # aws_session_token=current_app.config["AWS_SESSION_TOKEN"]
+    )
+    
     text_id = request.form.get('text_id')
     text_text = request.form.get('text_text')
     text_tag = request.form.get('text_tag')
@@ -482,7 +491,7 @@ def save_record():
 
     data = {
         "status": 'ok',
-        "message": "El audio ha sido almacenado correctamente.",
+        "message": _("El audio ha sido almacenado correctamente."),
         "daily_goal_reached": goal_reached,
         "daily_progress": f"{audios_today}/{daily_goal}",
         "new_badge": new_badge
@@ -494,7 +503,7 @@ def save_record():
 def select_badge():
     badge_image = request.json.get('badge_image')
     if not badge_image:
-        return jsonify({"status": "error", "message": "Falta la imagen de la insignia"}), 400
+        return jsonify({"status": "error", "message": _("Falta la imagen de la insignia")}), 400
     
     # Verificar que el usuario realmente tiene desbloqueada esa insignia
     audio = Audios()
@@ -512,7 +521,7 @@ def select_badge():
             break
             
     if not is_unlocked:
-        return jsonify({"status": "error", "message": "Insignia no desbloqueada"}), 403
+        return jsonify({"status": "error", "message": _("Insignia no desbloqueada")}), 403
         
     usuario_model = Usuario()
     usuario_model.update_one(
@@ -520,7 +529,7 @@ def select_badge():
         {"$set": {"selected_badge": badge_image}}
     )
     
-    return jsonify({"status": "ok", "message": "Insignia seleccionada con éxito"})
+    return jsonify({"status": "ok", "message": _("Insignia seleccionada con éxito")})
 
 @bp.route('/client-tag', methods=['POST'])
 @login_required
@@ -563,7 +572,7 @@ def tag_search():
     tags = syllabus.aggregate(pipeline)
 
     if not tags.alive:
-        flash("No se han encontrado resultados de la etiqueta '" + tag_name + "'", "danger")
+        flash(_("No se han encontrado resultados de la etiqueta '%(tag)s'", tag=tag_name), "danger")
 
     # Contar audios de hoy para el objetivo diario
     audio = Audios()
@@ -747,18 +756,23 @@ def client_report(id=None):
     audios_por_categoria = dict(sorted(temp_dict.items(), key=lambda x: x[1], reverse=True))
 
     # Insignias para el informe
-    badges_info = []
-    next_badge = None
-    for b in BADGES_THRESHOLDS:
-        unlocked = total_audios >= b["limit"]
-        badges_info.append({
+    def translate_badge(b, total):
+        return {
             "name": b["name"],
             "limit": b["limit"],
             "image": b["image"],
-            "unlocked": unlocked,
+            "unlocked": total >= b["limit"],
             "is_selected": getattr(current_user, 'selected_badge', None) == b["image"]
-        })
-        if not unlocked and not next_badge:
+        }
+    
+    badges_info = []
+    next_badge = None
+
+    for b in BADGES_THRESHOLDS:
+        badge = translate_badge(b, total_audios)
+        badges_info.append(badge)
+
+        if not badge["unlocked"] and not next_badge:
             next_badge = b
 
     return render_template(

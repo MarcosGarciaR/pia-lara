@@ -1,23 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ get_locale() }}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PIA Lara - Captura</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static',filename='styles/styleLogin.css') }}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
+    <title>PIA Lara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='styles/styleLogin.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
   </head>
   <body>
     <div class="container w-75 bg-transparent my-5 shadow">
@@ -28,35 +18,19 @@
           <div>
             <h1>PIA Lara</h1>
             <p>
-              El PIA Lara nace como un Proyecto de Investigación Aplicada
-              impulsado desde la <em>Conselleria d'Educació</em> de la
-              <em>Comunitat Valenciana</em> para fomentar actuaciones de
-              carácter innovador, experimental y formativo en FP, promoviendo la
-              innovación en la práctica docente así como las relaciones entre
-              los centros educativos de FP y las empresas.<br />
-              Actualmente está financiado por el Ministerio de Educación,
-              Formación Profesional y Deportes de España mediante el Plan de
-              Recuperación, Transformación y Resiliencia y la Unión Europea
-              mediante los fondos NextGenerationEU.<br />
-              <br />Este proyecto se desarrolla de manera conjunta por:<br />
-              -
-              <a href="https://portal.edu.gva.es/03013224/">IES Severo Ochoa</a>
-              de Elche<br />
-              -
-              <a href="https://portal.edu.gva.es/iesgranvia/">IES Gran Vía</a>
-              de Alicante<br />
-              -
-              <a href="https://sites.google.com/iesalbarregas.es/portada/inicio"
-                >IES Albarregas</a
-              >
-              de Mérida<br />
-              - <a href="https://iespoligonosur.org/">IES Polígono Sur</a> de
-              Sevilla<br />
-              -
-              <a href="https://portal.edu.gva.es/ivk/">IES Victoria Kent</a> de
-              Elche<br />
-              - <a href="https://teralco.com">Teralco</a> /
-              <a href="https://www.convotis.com/es/">Convotis</a><br />
+              {{ _("El PIA Lara nace como un Proyecto de Investigación Aplicada impulsado desde la") }}
+              <em>{{ _("Conselleria d'Educació") }}</em> {{ _('de la') }}
+              <em>{{ _('Comunitat Valenciana') }}</em>
+              {{ _('para fomentar actuaciones de carácter innovador, experimental y formativo en FP, promoviendo la innovación en la práctica docente así como las relaciones entre los centros educativos de FP y las empresas.') }}
+              <br />
+              {{ _('Actualmente está financiado por el Ministerio de Educación, Formación Profesional y Deportes de España mediante el Plan de Recuperación, Transformación y Resiliencia y la Unión Europea mediante los fondos NextGenerationEU.') }}
+              <br /><br />{{ _('Este proyecto se desarrolla de manera conjunta por:') }}<br />
+              - <a href="https://portal.edu.gva.es/03013224/">IES Severo Ochoa</a> {{ _('de Elche') }}<br />
+              - <a href="https://portal.edu.gva.es/iesgranvia/">IES Gran Vía</a> {{ _('de Alicante') }}<br />
+              - <a href="https://sites.google.com/iesalbarregas.es/portada/inicio">IES Albarregas</a> {{ _('de Mérida') }}<br />
+              - <a href="https://iespoligonosur.org/">IES Polígono Sur</a> {{ _('de Sevilla') }}<br />
+              - <a href="https://portal.edu.gva.es/ivk/">IES Victoria Kent</a> {{ _('de Elche') }}<br />
+              - <a href="https://teralco.com">Teralco</a> / <a href="https://www.convotis.com/es/">Convotis</a><br />
               - <a href="https://josebarragancsd.com">José Barragán</a><br />
               - <a href="https://tilua.es">Tilúa</a><br />
             </p>
@@ -66,38 +40,31 @@
           <div class="text-center">
             <img src="{{ url_for('static',filename='img/logoLara.png') }}" />
           </div>
-          <h2 class="fw-bold text-center py-3">Bienvenido</h2>
-          {% with messages = get_flashed_messages(with_categories=true) %} {% if
-          messages %} {% for category, message in messages %}
+          <h2 class="fw-bold text-center py-3">{{ _('Bienvenido') }}</h2>
+
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+          {% for category, message in messages %}
           <div class="alert alert-{{ category }}">{{ message }}</div>
-          {% endfor %} {% endif %} {% endwith %}
-          <form method="POST" action="{{ url_for('auth.login') }}">
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+<form method="POST" action="{{ url_for('auth.login') }}">
             <div class="mb-4">
-              <label for="user" class="formlabel">Usuario</label>
-              <input
-                class="form-control"
-                type="email"
-                name="email"
-                placeholder="Tu Email"
-                autofocus=""
-              />
+              <label for="user" class="formlabel">{{ _('Usuario') }}</label>
+              <input class="form-control" type="email" name="email" placeholder="{{ _('Tu Email') }}" autofocus="" />
             </div>
             <div class="mb-4">
-              <label for="password" class="formlabel">Contraseña</label>
-              <input
-                class="form-control"
-                type="password"
-                name="password"
-                placeholder="Tu contraseña"
-              />
+              <label for="password" class="formlabel">{{ _('Contraseña') }}</label>
+              <input class="form-control" type="password" name="password" placeholder="{{ _('Tu contraseña') }}" />
             </div>
             <div class="d-grid gap-2 d-md-block">
               <button type="submit" class="btn inciarSesion text-light">
-                Iniciar Sesión
+                {{ _('Iniciar Sesión') }}
               </button>
             </div>
             <div class="my-3">
-              {# <span>No tienes cuenta? <a href="#">Regístrate</a></span
+              {# <span>{{ _('No tienes cuenta?') }} <a href="#">{{ _('Regístrate') }}</a></span
               ><br />#}
               <!-- <span><a href="{{ url_for('auth.email_rec_password') }}">Recuperar Password</a></span> -->
 

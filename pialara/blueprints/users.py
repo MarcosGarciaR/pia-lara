@@ -10,6 +10,7 @@ from urllib import request
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
+from flask_babel import _
 
 from flask_login import login_required, current_user
 from pialara.decorators import rol_required
@@ -139,14 +140,14 @@ def create_post():
     user = Usuario()
 
     if pass1 != pass2:
-        flash("Las contraseñas no son iguales", "danger")
+        flash(_("Las contraseñas no son iguales"), "danger")
         return render_template("users/create.html")
 
     try:
         # ADMIN
         if nombreAdmin:
             if existeCorreo(emailAdmin):
-                flash("El correo del admin ya existe", "danger")
+                flash(_("El correo del admin ya existe"), "danger")
                 return redirect(url_for("users.create"))
 
             newUser = {
@@ -160,16 +161,16 @@ def create_post():
             result = user.insert_one(newUser)
 
             if result.acknowledged:
-                flash("Usuario creado correctamente", "success")
+                flash(_("Usuario creado correctamente"), "success")
                 return redirect(url_for("users.index"))
 
-            flash("El usuario no se ha creado. Error genérico", "danger")
+            flash(_("El usuario no se ha creado. Error genérico"), "danger")
             return redirect(url_for("users.create"))
 
         # TECNICO
         if nombreTecnico:
             if existeCorreo(emailTecnico):
-                flash("El correo del técnico ya existe", "danger")
+                flash(_("El correo del técnico ya existe"), "danger")
                 return redirect(url_for("users.create"))
 
             newUser = {
@@ -184,20 +185,20 @@ def create_post():
             result = user.insert_one(newUser)
 
             if result.acknowledged:
-                flash("Usuario creado correctamente", "success")
+                flash(_("Usuario creado correctamente"), "success")
                 return redirect(url_for("users.index"))
 
-            flash("El usuario no se ha creado. Error genérico", "danger")
+            flash(_("El usuario no se ha creado. Error genérico"), "danger")
             return redirect(url_for("users.create"))
 
         # CLIENTE
         if nombreCliente:
             if existeCorreo(mailCliente):
-                flash("El correo del cliente ya existe", "danger")
+                flash(_("El correo del cliente ya existe"), "danger")
                 return redirect(url_for("users.create"))
 
             if not fNacCliente:
-                flash("Fecha de nacimiento vacía", "danger")
+                flash(_("Fecha de nacimiento vacía"), "danger")
                 return redirect(url_for("users.create"))
 
             fecha = datetime.strptime(fNacCliente, "%Y-%m-%d")
@@ -253,22 +254,22 @@ def create_post():
             result = user.insert_one(newUser)
 
             if result.acknowledged:
-                flash("Usuario creado correctamente", "success")
+                flash(_("Usuario creado correctamente"), "success")
                 return redirect(url_for("users.index"))
 
-            flash("El usuario no se ha creado. Error genérico", "danger")
+            flash(_("El usuario no se ha creado. Error genérico"), "danger")
             return redirect(url_for("users.create"))
 
         # Si no venía nada que crear
-        flash("Formulario incompleto: no se recibió admin/técnico/cliente", "danger")
+        flash(_("Formulario incompleto: no se recibió admin/técnico/cliente"), "danger")
         return redirect(url_for("users.create"))
 
     except PyMongoError as e:
-        flash(f"Error MongoDB: {str(e)}", "danger")
+        flash(_(f"Error MongoDB: {str(e)}"), "danger")
         return redirect(url_for("users.create"))
 
     except Exception as e:
-        flash(f"Error: {str(e)}", "danger")
+        flash(_(f"Error: {str(e)}"), "danger")
         return redirect(url_for("users.create"))
 
 
@@ -300,7 +301,7 @@ def update_tech_post(id):
     tecnico = request.form.get('tecnico')
 
     if len(tecnico) != 24:
-        flash('Error localizando al técnico. Id inexistente.', 'danger')
+        flash(_('Error localizando al técnico. Id inexistente.'), 'danger')
         return redirect(url_for('users.index'))
 
     # Guardamos en model_tec el tecnico seleccionado
@@ -317,7 +318,7 @@ def update_tech_post(id):
     else:
 
         # Si no lo encuentra, cancelamos la operacion y avisamos del error
-        flash('Error localizando al técnico seleccionado', 'danger')
+        flash( _("Error localizando al técnico seleccionado"), "danger")
         return redirect(url_for('users.index'))
 
 
@@ -326,7 +327,7 @@ def update_tech_post(id):
     print("MONGO_SET", mongo_set)
     resultado = usu.update_one({'_id': ObjectId(id)}, mongo_set)
 
-    flash('Tecnico migrado con exito', 'success')
+    flash(_("Tecnico migrado con exito"), "success")
     return redirect(url_for('users.index'))
 
 
@@ -417,7 +418,7 @@ def update_post(id):
     usuario_db = usu.find_one({'_id': ObjectId(id)})
 
     if not usuario_db:
-        flash('Usuario no encontrado', 'danger')
+        flash(_("Usuario no encontrado"), "danger")
         return redirect(url_for('users.index'))
 
     rol_usuario_objetivo = usuario_db.get('rol')
@@ -514,10 +515,10 @@ def update_post(id):
 
         if resultado.acknowledged:
             session['font_size'] = font_size
-            flash('Usuario actualizado correctamente', 'success')
+            flash(_("Usuario actualizado correctamente"), "success")
             return redirect(url_for('users.index', id=id))
 
-        flash('Error al actualizar el usuario, inténtelo de nuevo...', 'danger')
+        flash(_("Error al actualizar el usuario, inténtelo de nuevo..."), "danger")
         return redirect(url_for('users.update', id=id))
 
     # ========== SCHEMA VERSION 1 ==========
@@ -559,10 +560,10 @@ def update_post(id):
 
     if resultado.acknowledged:
         session['font_size'] = font_size
-        flash('Usuario actualizado correctamente', 'success')
+        flash(_("Usuario actualizado correctamente"), "success")
         return redirect(url_for('users.index', id=id))
 
-    flash('Error al actualizar el usuario, inténtelo de nuevo...', 'danger')
+    flash(_("Error al actualizar el usuario, inténtelo de nuevo..."), "danger")
     return redirect(url_for('users.update', id=id))
 
 
@@ -599,12 +600,12 @@ def update_pass_post(id):
 
     # Comprobar Password usuario
     if not check_password_hash(logged_user.password, user_logged_pass):
-        flash("Su contraseña no es correcta", 'danger')
+        flash(_("Su contraseña no es correcta"), 'danger')
         return redirect(url_for('users.update_pass_post', id=id))
     
     # Comprobar nueva Password
     if new_pass != repeat_pass:
-        flash("Las contraseñas no son iguales", 'danger')
+        flash(_("Las contraseñas no son iguales"), 'danger')
         return redirect(url_for('users.update_pass_post', id=id))
 
     mongo_set = {"$set": {'password': generate_password_hash(new_pass, method='sha256')}}
@@ -614,10 +615,10 @@ def update_pass_post(id):
 
     # Mensajes de salida
     if resultado.acknowledged:
-        flash('Contraseña actualizada correctamente', 'success')
+        flash(_("Contraseña actualizada correctamente"), "success")
         return redirect(url_for('users.index'))
     else:
-        flash('Error al actualizar la constraseña, inténtelo de nuevo...', 'danger')
+        flash(_("Error al actualizar la constraseña, inténtelo de nuevo..."), "danger")
         return redirect(url_for('users.update_pass_post', id=id))
      
     

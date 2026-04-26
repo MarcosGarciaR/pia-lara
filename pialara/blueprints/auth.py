@@ -2,6 +2,7 @@ from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
 from flask_login import login_required, login_user, current_user, logout_user
+from flask_babel import _
 from werkzeug.security import check_password_hash
 from pialara import db
 from werkzeug.security import generate_password_hash #Haseo de la contraseña
@@ -23,7 +24,7 @@ def login_post():
     # comprobamos si el usuario existe
     # cogemos la contraseña, la hasheamos y la comparamos con la contraseña hasheada
     if not user or not check_password_hash(user.password, password):
-        flash('Por favor, comprueba tus datos y vuélvelo a intentar', 'danger')
+        flash(_('Por favor, comprueba tus datos y vuélvelo a intentar'), 'danger')
         # si el usuario no existe, o está mal la contraseña, recargamos la página
         return redirect(url_for('auth.login'))
 
@@ -52,17 +53,17 @@ def info_rec_password():
         user = db.get_user(email)
 
         if not user:
-            flash('El correo introducido no está registrado', 'danger')
+            flash(_('El correo introducido no está registrado'), 'danger')
             return redirect(url_for('auth.email_rec_password'))
 
         if user.nombre.lower().strip() != nombre.lower().strip():
-            flash('El nombre no coincide con el correo introducido', 'danger')
+            flash(_('El nombre no coincide con el correo introducido'), 'danger')
             return redirect(url_for('auth.email_rec_password'))
 
         # Guardamos temporalmente el email en la sesión para el siguiente paso
         session['email_reset'] = email
 
-        flash('Datos verificados. Introduce tu nueva contraseña', 'success')
+        flash(_('Datos verificados. Introduce tu nueva contraseña'), 'success')
         return redirect(url_for('auth.rec_password'))
 
     return render_template('auth/info_rec_password.html')
@@ -75,26 +76,26 @@ def rec_password():
 
         # Validacion para las contraseñas, tienen que coincidir
         if new_password != confirm_password:
-            flash('Las contraseñas no coinciden', 'danger')
+            flash(_('Las contraseñas no coinciden'), 'danger')
             return redirect(url_for('auth.info_rec_password'))
 
         # mail de la sesión guardada
         email = session.get('email_reset')
         if not email:
-            flash('Error: no se encontró la sesión de recuperación', 'danger')
+            flash(_('Error: no se encontró la sesión de recuperación'), 'danger')
             return redirect(url_for('auth.email_rec_password'))
 
         
         user = db.get_user(email)
         if not user:
-            flash('No se encontró el usuario', 'danger')
+            flash(_('No se encontró el usuario'), 'danger')
             return redirect(url_for('auth.email_rec_password'))
 
         # hasheamos y actualizamos la nueva contraseña
         hashed_password = generate_password_hash(new_password)
         db.update_password(email, hashed_password)
 
-        flash('Contraseña cambiada con éxito', 'success')
+        flash(_('Contraseña cambiada con éxito'), 'success')
         return redirect(url_for('auth.login'))
 
     # Si es GET, mostramos la página de cambio de contraseña
@@ -105,5 +106,5 @@ def rec_password():
 def logout():
     session.pop('font_size', None)
     logout_user()
-    flash('Sesión cerrada con éxito', 'success')
+    flash(_('Sesión cerrada con éxito'), 'success')
     return redirect(url_for('auth.login'))

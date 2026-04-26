@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, session, request
 from flask_login import LoginManager
 from pialara import db
+from flask_babel import Babel, get_locale
 import os
 import configparser
 
@@ -23,6 +24,19 @@ def create_app():
     app.config['BUCKET_NAME'] = config['LOCAL']['BUCKET_NAME']
 
     app.config['GRADIO_URL'] = config['LOCAL']['GRADIO_URL']
+
+    app.config['LANGUAGES'] = ['es', 'en']
+    app.config['BABEL_DEFAULT_LOCALE'] = 'es'
+    app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
+
+    def select_locale():
+        return session.get('lang', 'es')
+
+    babel = Babel(app, locale_selector=select_locale)
+
+    @app.context_processor
+    def inject_locale():
+        return dict(get_locale=get_locale)
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'

@@ -9,7 +9,7 @@
         {% endif %}
     {% endwith %}
 
-    <h1 class="text-center p-3">Crear Encadenados</h1>
+    <h1 class="text-center p-3">{{ _('Crear Encadenados') }}</h1>
     
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -19,17 +19,17 @@
         </div>
         {% endfor %}
     {% endif %}
-    {% endwith %}
+    {% endwith %}
  
     <form class="container" name="miFormulario" onsubmit="return validarFormulario()" 
 	method="post" style="max-width: 30rem" 
 	action="{{ url_for("syllabus.create_iterable") }}">
         <div class="mb-3">
             <div class="mb-3">
-                <label class="form_label mb-3" for="numberSelect">¿Cuantas frases encadenadas?</label>
+                <label class="form_label mb-3" for="numberSelect">{{ _('¿Cuantas frases encadenadas?') }}</label>
                 <div class="form_label mb-3">
                     <select id="numberSelect" name="qtyPhrases">
-                        <option value="0">Seleccionar</option>
+                        <option value="0">{{ _('Seleccionar') }}</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -41,12 +41,12 @@
             </div>
         </div>
         <div class="mb-3">
-            <label for="tags" class="form-label">Tags (separados por comas)</label>
-            <input class="form-control" id="tags" type="text" name="ftags" placeholder="Tags" rows="1" cols="70"/>
+            <label for="tags" class="form-label">{{ _('Tags (separados por comas)') }}</label>
+            <input class="form-control" id="tags" type="text" name="ftags" placeholder="{{ _('Tags') }}" rows="1" cols="70"/>
         </div>
         <div class="mb-3">
             <button class="btn btn-primary w-100 shadow" type="submit">
-                <i class="bi bi-plus-square me-2"></i>Crear frase
+                <i class="bi bi-plus-square me-2"></i>{{ _('Crear frase') }}
             </button>
         </div>
     </form>
@@ -56,7 +56,7 @@
     function validarFormulario() {
         let tag = document.forms["miFormulario"]["ftags"].value;
         if (tag.trim() == "") {
-            alert("Todos los campos deben estar llenos.");
+            alert("{{ _('Todos los campos deben estar llenos.') }}");
             return false;
         }
 
@@ -64,7 +64,7 @@
         const inputs = document.querySelectorAll('#inputContainer input[type="text"]');
         for (let input of inputs) {
             if (input.value.trim() === "") {
-                alert("Todos los campos de frases encadenadas deben estar llenos.");
+                alert("{{ _('Todos los campos de frases encadenadas deben estar llenos.') }}");
                 return false;
             }
         }
