@@ -18,7 +18,6 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 
 #: pialara/blueprints/audios.py:32
-#, fuzzy
 msgid "Principiante"
 msgstr "Beginner"
 
@@ -31,17 +30,14 @@ msgid "Especialista"
 msgstr "Specialist"
 
 #: pialara/blueprints/audios.py:35
-#, fuzzy
 msgid "Profesional"
 msgstr "Professional"
 
 #: pialara/blueprints/audios.py:36
-#, fuzzy
 msgid "Experto"
 msgstr "Expert"
 
 #: pialara/blueprints/audios.py:37
-#, fuzzy
 msgid "Leyenda"
 msgstr "Legend"
 
