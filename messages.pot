@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-19 17:54+0200\n"
+"POT-Creation-Date: 2026-04-29 10:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,30 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
-
-#: pialara/blueprints/audios.py:32
-msgid "Principiante"
-msgstr ""
-
-#: pialara/blueprints/audios.py:33
-msgid "Avanzado"
-msgstr ""
-
-#: pialara/blueprints/audios.py:34
-msgid "Especialista"
-msgstr ""
-
-#: pialara/blueprints/audios.py:35
-msgid "Profesional"
-msgstr ""
-
-#: pialara/blueprints/audios.py:36
-msgid "Experto"
-msgstr ""
-
-#: pialara/blueprints/audios.py:37
-msgid "Leyenda"
-msgstr ""
 
 #: pialara/blueprints/audios.py:74
 msgid "Novato"
@@ -50,25 +25,37 @@ msgstr ""
 msgid "No se han encontrado frases con la etiqueta '%(tag)s'"
 msgstr ""
 
-#: pialara/blueprints/audios.py:486
+#: pialara/blueprints/audios.py:494
 msgid "El audio ha sido almacenado correctamente."
 msgstr ""
 
-#: pialara/blueprints/audios.py:498
+#: pialara/blueprints/audios.py:506
 msgid "Falta la imagen de la insignia"
 msgstr ""
 
-#: pialara/blueprints/audios.py:516
+#: pialara/blueprints/audios.py:524
 msgid "Insignia no desbloqueada"
 msgstr ""
 
-#: pialara/blueprints/audios.py:524
+#: pialara/blueprints/audios.py:532
 msgid "Insignia seleccionada con éxito"
 msgstr ""
 
-#: pialara/blueprints/audios.py:567
+#: pialara/blueprints/audios.py:575
 #, python-format
 msgid "No se han encontrado resultados de la etiqueta '%(tag)s'"
+msgstr ""
+
+#: pialara/blueprints/audios.py:630
+msgid "Desconocido"
+msgstr ""
+
+#: pialara/blueprints/audios.py:638
+msgid "los usuarios supervisados"
+msgstr ""
+
+#: pialara/blueprints/audios.py:642
+msgid "Todos los usuarios"
 msgstr ""
 
 #: pialara/blueprints/auth.py:27
@@ -286,7 +273,7 @@ msgstr ""
 msgid "Alto Contraste 3"
 msgstr ""
 
-#: pialara/templates/layout.html:95 pialara/templates/layout.html:161
+#: pialara/templates/layout.html:95 pialara/templates/layout.html:160
 msgid "Salir"
 msgstr ""
 

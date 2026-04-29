@@ -627,7 +627,7 @@ def client_report(id=None):
         match_filter = {"usuario.id": user_id}
 
         cliente = usuario_model.find_one({"_id": user_id})
-        cliente_nombre = cliente.get("nombre", "Desconocido") if cliente else "Desconocido"
+        cliente_nombre = cliente.get("nombre", _("Desconocido")) if cliente else _("Desconocido")
     elif logged_rol == "tecnico":
         # Técnico: todos los clientes cuyo parent es el técnico de la sesión
         tecnico_email = current_user.email          
@@ -635,11 +635,11 @@ def client_report(id=None):
         cliente_ids = [c["_id"] for c in clientes]
 
         match_filter = {"usuario.id": {"$in": cliente_ids}}
-        cliente_nombre = "los usuarios supervisados"
+        cliente_nombre = _("los usuarios supervisados")
     elif logged_rol == "admin":
         # Admin: no filtro por usuario → ve todos los audios
         match_filter = {}
-        cliente_nombre = "Todos los usuarios"
+        cliente_nombre = _("Todos los usuarios")
 
     # ─────────────────────────────────────────────────────────────
     # 2. Pipeline único con $facet (independiente del rol)
