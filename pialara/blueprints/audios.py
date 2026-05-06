@@ -29,12 +29,12 @@ from random import sample
 
 bp = Blueprint('audios', __name__, url_prefix='/audios')
 BADGES_THRESHOLDS = [
-    {"limit": 10,  "name": "Principiante", "image": "badge_10.png"},
-    {"limit": 25,  "name": "Avanzado",     "image": "badge_25.png"},
-    {"limit": 50,  "name": "Especialista", "image": "badge_50.png"},
-    {"limit": 100, "name": "Profesional",  "image": "badge_100.png"},
-    {"limit": 200, "name": "Experto",      "image": "badge_200.png"},
-    {"limit": 500, "name": "Leyenda",      "image": "badge_500.png"},
+    {"limit": 10,  "name": _("Principiante"), "image": "badge_10.png"},
+    {"limit": 25,  "name": _("Avanzado"),     "image": "badge_25.png"},
+    {"limit": 50,  "name": _("Especialista"), "image": "badge_50.png"},
+    {"limit": 100, "name": _("Profesional"),  "image": "badge_100.png"},
+    {"limit": 200, "name": _("Experto"),      "image": "badge_200.png"},
+    {"limit": 500, "name": _("Leyenda"),      "image": "badge_500.png"},
 ]
 
 @bp.app_context_processor

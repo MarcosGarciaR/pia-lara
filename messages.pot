@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-29 10:25+0200\n"
+"POT-Creation-Date: 2026-05-06 16:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,26 +17,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: pialara/blueprints/audios.py:74
-msgid "Novato"
-msgstr ""
-
+#: pialara/blueprints/audios.py:32
 msgid "Principiante"
 msgstr ""
 
+#: pialara/blueprints/audios.py:33
 msgid "Avanzado"
 msgstr ""
 
+#: pialara/blueprints/audios.py:34
 msgid "Especialista"
 msgstr ""
 
+#: pialara/blueprints/audios.py:35
 msgid "Profesional"
 msgstr ""
 
+#: pialara/blueprints/audios.py:36
 msgid "Experto"
 msgstr ""
 
+#: pialara/blueprints/audios.py:37
 msgid "Leyenda"
+msgstr ""
+
+#: pialara/blueprints/audios.py:74
+msgid "Novato"
 msgstr ""
 
 #: pialara/blueprints/audios.py:341

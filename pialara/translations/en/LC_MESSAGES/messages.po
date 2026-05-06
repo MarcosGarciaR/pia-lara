@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-29 10:25+0200\n"
+"POT-Creation-Date: 2026-05-06 16:59+0200\n"
 "PO-Revision-Date: 2026-04-19 16:54+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,27 +17,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: pialara/blueprints/audios.py:74
-msgid "Novato"
-msgstr "Rookie"
-
+#: pialara/blueprints/audios.py:32
 msgid "Principiante"
 msgstr "Beginner"
 
+#: pialara/blueprints/audios.py:33
 msgid "Avanzado"
 msgstr "Advanced"
 
+#: pialara/blueprints/audios.py:34
 msgid "Especialista"
 msgstr "Specialist"
 
+#: pialara/blueprints/audios.py:35
 msgid "Profesional"
 msgstr "Professional"
 
+#: pialara/blueprints/audios.py:36
 msgid "Experto"
 msgstr "Expert"
 
+#: pialara/blueprints/audios.py:37
 msgid "Leyenda"
 msgstr "Legend"
+
+#: pialara/blueprints/audios.py:74
+msgid "Novato"
+msgstr "Rookie"
 
 #: pialara/blueprints/audios.py:341
 #, python-format
@@ -1551,4 +1557,19 @@ msgstr "Preferences"
 #: pialara/templates/users/update.html:252
 msgid "Enfermedades"
 msgstr "Conditions"
+
+#~ msgid "Avanzado"
+#~ msgstr "Advanced"
+
+#~ msgid "Especialista"
+#~ msgstr "Specialist"
+
+#~ msgid "Profesional"
+#~ msgstr "Professional"
+
+#~ msgid "Experto"
+#~ msgstr "Expert"
+
+#~ msgid "Leyenda"
+#~ msgstr "Legend"
 
