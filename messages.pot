@@ -20,6 +20,24 @@ msgstr ""
 msgid "Novato"
 msgstr ""
 
+msgid "Principiante"
+msgstr ""
+
+msgid "Avanzado"
+msgstr ""
+
+msgid "Especialista"
+msgstr ""
+
+msgid "Profesional"
+msgstr ""
+
+msgid "Experto"
+msgstr ""
+
+msgid "Leyenda"
+msgstr ""
+
 #: pialara/blueprints/audios.py:341
 #, python-format
 msgid "No se han encontrado frases con la etiqueta '%(tag)s'"

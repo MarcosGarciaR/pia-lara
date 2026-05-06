@@ -21,6 +21,24 @@ msgstr ""
 msgid "Novato"
 msgstr "Rookie"
 
+msgid "Principiante"
+msgstr "Beginner"
+
+msgid "Avanzado"
+msgstr "Advanced"
+
+msgid "Especialista"
+msgstr "Specialist"
+
+msgid "Profesional"
+msgstr "Professional"
+
+msgid "Experto"
+msgstr "Expert"
+
+msgid "Leyenda"
+msgstr "Legend"
+
 #: pialara/blueprints/audios.py:341
 #, python-format
 msgid "No se han encontrado frases con la etiqueta '%(tag)s'"
@@ -1533,22 +1551,4 @@ msgstr "Preferences"
 #: pialara/templates/users/update.html:252
 msgid "Enfermedades"
 msgstr "Conditions"
-
-#~ msgid "Principiante"
-#~ msgstr "Beginner"
-
-#~ msgid "Avanzado"
-#~ msgstr "Advanced"
-
-#~ msgid "Especialista"
-#~ msgstr "Specialist"
-
-#~ msgid "Profesional"
-#~ msgstr "Professional"
-
-#~ msgid "Experto"
-#~ msgstr "Expert"
-
-#~ msgid "Leyenda"
-#~ msgstr "Legend"
 
