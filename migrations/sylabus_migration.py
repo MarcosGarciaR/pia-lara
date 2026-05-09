@@ -3,16 +3,20 @@ import bson
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash
 import os
-import configparser
+import json
+import boto3
 from datetime import datetime
 
-config = configparser.ConfigParser()
-config.read(os.path.abspath(os.path.join(".ini")))
 
-# DB_URI = config['PROD']['PIALARA_DB_URI']
-# DB_NAME = config['PROD']['PIALARA_DB_NAME']
-DB_URI = config['LOCAL']['PIALARA_DB_URI']
-DB_NAME = config['LOCAL']['PIALARA_DB_NAME']
+def get_secrets():
+    client = boto3.client("secretsmanager", region_name="us-east-1")
+    response = client.get_secret_value(SecretId="LARA")
+    return json.loads(response["SecretString"])
+
+secrets = get_secrets()
+DB_URI = secrets['PIALARA_DB_URI']
+DB_NAME = secrets['PIALARA_DB_NAME']
+
 
 db = MongoClient(
     DB_URI,

@@ -3,27 +3,34 @@ from flask_login import LoginManager
 from pialara import db
 from flask_babel import Babel, get_locale
 import os
-import configparser
+import json
+import boto3
+from botocore.exceptions import ClientError
+
+def get_secrets():
+    secret_name = "PIALARA"
+    region_name = "us-east-1"  # ajusta a tu región
+
+    client = boto3.client("secretsmanager", region_name=region_name)
+
+    try:
+        response = client.get_secret_value(SecretId=secret_name)
+        return json.loads(response["SecretString"])
+    except ClientError as e:
+        raise RuntimeError(f"Error al obtener secretos de AWS: {e}")
 
 def create_app():
-    # create and configure the app
     app = Flask(__name__)
-    config = configparser.ConfigParser()
-    
-    config.read(os.path.abspath(os.path.join(".ini")))
-    
-    # config.read('/var/www/pia-lara/.ini')
-    # config.read('.ini')
 
-    app.config['PIALARA_DB_URI'] = config['LOCAL']['PIALARA_DB_URI']
-    app.config['PIALARA_DB_NAME'] = config['LOCAL']['PIALARA_DB_NAME']
-    app.config['SECRET_KEY'] = config['LOCAL']['SECRET_KEY']
+    secrets = get_secrets()
 
-    app.config['AWS_ACCESS_KEY_ID'] = config['LOCAL']['AWS_ACCESS_KEY_ID']
-    app.config['AWS_SECRET_ACCESS_KEY'] = config['LOCAL']['AWS_SECRET_ACCESS_KEY']
-    app.config['BUCKET_NAME'] = config['LOCAL']['BUCKET_NAME']
-
-    app.config['GRADIO_URL'] = config['LOCAL']['GRADIO_URL']
+    app.config['PIALARA_DB_URI']          = secrets['PIALARA_DB_URI']
+    app.config['PIALARA_DB_NAME']         = secrets['PIALARA_DB_NAME']
+    app.config['SECRET_KEY']              = secrets['SECRET_KEY']
+    app.config['AWS_ACCESS_KEY_ID']       = secrets['AWS_ACCESS_KEY_ID']
+    app.config['AWS_SECRET_ACCESS_KEY']   = secrets['AWS_SECRET_ACCESS_KEY']
+    app.config['BUCKET_NAME']             = secrets['BUCKET_NAME']
+    app.config['GRADIO_URL']              = secrets['GRADIO_URL']
 
     app.config['LANGUAGES'] = ['es', 'en']
     app.config['BABEL_DEFAULT_LOCALE'] = 'es'
