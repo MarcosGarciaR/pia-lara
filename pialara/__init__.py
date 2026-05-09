@@ -27,8 +27,6 @@ def create_app():
     app.config['PIALARA_DB_URI']          = secrets['PIALARA_DB_URI']
     app.config['PIALARA_DB_NAME']         = secrets['PIALARA_DB_NAME']
     app.config['SECRET_KEY']              = secrets['SECRET_KEY']
-    app.config['AWS_ACCESS_KEY_ID']       = secrets['AWS_ACCESS_KEY_ID']
-    app.config['AWS_SECRET_ACCESS_KEY']   = secrets['AWS_SECRET_ACCESS_KEY']
     app.config['BUCKET_NAME']             = secrets['BUCKET_NAME']
     app.config['GRADIO_URL']              = secrets['GRADIO_URL']
 
