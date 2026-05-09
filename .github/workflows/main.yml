@@ -1,0 +1,38 @@
+name: Deploy to EC2
+ 
+on:
+  push:
+    branches: [ "feature-sevilla-despliegueawssecrets" ]
+ 
+permissions:
+  contents: read
+ 
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+ 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+ 
+      - name: Deploy via SSH to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 18.214.200.16
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/pia-lara
+ 
+            # Actualizar el código
+            git fetch origin
+            git checkout feature-sevilla-despliegueawssecrets
+            git pull origin feature-sevilla-despliegueawssecrets
+ 
+            # Reconstruir y relanzar solo Flask
+            docker compose up -d --build flask
+ 
+            # Comprobar que están corriendo
+            docker compose ps
