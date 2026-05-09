@@ -1,0 +1,33 @@
+services:
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo-prod
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - pialara-net
+      # Contenedor solo accesible desde la red interna, no expone el puerto al exterior
+
+  flask:
+    build: .
+    container_name: flask-prod
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    volumes:
+      - .:/app
+    networks:
+      - pialara-net
+    environment:
+      - FLASK_ENV=production
+
+networks:
+  pialara-net:
+    driver: bridge
+
+volumes:
+  mongo-data:
