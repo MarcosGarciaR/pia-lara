@@ -15,12 +15,12 @@ En local tenemos las claves, estas son las siguientes:
 - BUCKET_NAME = pialara
 - GRADIO_URL = http://localhost:8080/gradio
 
-Buscamos el servicio de Secrets Manager.
-Almacenamos un secreto nuevo
- 
-Otro tipo de secreto
-Texto no cifrado (en formato JSON)
-Insertamos lo siguiente
+Buscamos el servicio de Secrets Manager y almacenamos un secreto nuevo.
+
+Otro tipo de secreto --> Texto no cifrado (en formato JSON)
+
+Insertamos lo siguiente:
+``` 
 {
 "SECRET_KEY":"eac5e91171438960ddec0c9c469a4c3dd42e96aea462afc5ab830f78527ad80e",
 PIALARA_DB_URI":"mongo",
@@ -28,10 +28,9 @@ PIALARA_DB_NAME":"prelara",
 BUCKET_NAME":"pialara",
 GRADIO_URL":"http://localhost:8080/gradio"
 }
-
+```
 Nombre PIALARA
-Almacenamos el secreto
-
+- Almacenamos el secreto
 
 ## Instalación de Docker en la instancia AWS
 Copiar y pegar
@@ -61,12 +60,21 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-- sudo usermod -aG docker ubuntu
-- sudo usermod -aG $USER
+```
+sudo usermod -aG docker ubuntu
+``` 
 
-- newgrp
-- newgrp docker
+``` 
+sudo usermod -aG $USER
+``` 
 
+``` 
+newgrp
+``` 
+
+``` 
+newgrp docker
+``` 
 
 ## Bajar el proyecto por HTTPS (sin clave)
 - git clone https://github.com/MarcosGarciaR/pia-lara.git 
@@ -83,10 +91,12 @@ En la consola de la instancia en AWS
 - Actualizar rol
 
 Comprobar acceso a claves en la instancia
-- sudo apt install -y awscli
-- aws secretsmanager get-secret-value --secret-id PIALARA --region us-east-1
+``` 
+sudo apt install -y awscli
+aws secretsmanager get-secret-value --secret-id PIALARA --region us-east-1
+```
 
-
+## Levantar contenedor de la BBDD
 - scp -i LARA.pem dump-prelara-260924 ubuntu@18.214.200.16:~/
 - docker compose up -d mongo 
 - docker cp ~/dump-prelara-260924 mongo-prod:/data/import 
@@ -94,7 +104,6 @@ Comprobar acceso a claves en la instancia
 
 - docker compose up -d --build
 - docker exec -it flask-prod python3 migrations/sylabus_migration.py
-
 
 ## Configurar NGINX
 
@@ -107,23 +116,27 @@ Comprobar acceso a claves en la instancia
   -keyout /etc/nginx/ssl/pialara.key \
   -out /etc/nginx/ssl/pialara.crt
 
-Country Name: ES
-State: Sevilla
-Locality: Carmona
-Organization Name: PiaLara
-Common Name: 18.214.200.16
-Email: marcos.garcia.rodriguez.al@iespoligonosur.org
+``` 
+- Country Name: ES
+- State: Sevilla
+- Locality: Carmona
+- Organization Name: PiaLara
+- Common Name: 18.214.200.16
+- Email: marcos.garcia.rodriguez.al@iespoligonosur.org
+``` 
 
 ## Redirige todo el HTTP a HTTPS
 - sudo nano /etc/nginx/sites-available/pialara
-
+```
 server {
     listen 80;
     server_name 18.214.200.16;
     return 301 https://$host$request_uri;
 }
+``` 
 
 ### HTTPS con certificado auto-firmado
+``` 
 server {
     listen 443 ssl;
     server_name 18.214.200.16;
@@ -142,6 +155,7 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
+```
 
 - sudo ln -s /etc/nginx/sites-available/pialara /etc/nginx/sites-enabled/
 - sudo nginx -t
