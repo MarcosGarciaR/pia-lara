@@ -5,9 +5,11 @@ from flask_babel import Babel, get_locale
 import os
 import json
 import boto3
+
+import configparser
 from botocore.exceptions import ClientError
 
-def get_secrets():
+def get_secrets_from_aws():
     secret_name = "PIALARA"
     region_name = "us-east-1"  # ajusta a tu región
 
@@ -18,6 +20,17 @@ def get_secrets():
         return json.loads(response["SecretString"])
     except ClientError as e:
         raise RuntimeError(f"Error al obtener secretos de AWS: {e}")
+
+def get_secrets():
+    ini_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.ini'))
+        
+    if os.path.exists(ini_path):
+        config = configparser.RawConfigParser()
+        config.optionxform = str
+        config.read(ini_path)
+        return dict(config['LOCAL'])
+    else:
+        return get_secrets_from_aws()
 
 def create_app():
     app = Flask(__name__)

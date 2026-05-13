@@ -5,13 +5,21 @@ from werkzeug.security import generate_password_hash
 import os
 import json
 import boto3
+import configparser
 from datetime import datetime
 
 
 def get_secrets():
-    client = boto3.client("secretsmanager", region_name="us-east-1")
-    response = client.get_secret_value(SecretId="LARA")
-    return json.loads(response["SecretString"])
+    ini_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.ini'))
+    
+    if os.path.exists(ini_path):
+        config = configparser.ConfigParser()
+        config.read(ini_path)
+        return dict(config['LOCAL'])
+    else:
+        client = boto3.client("secretsmanager", region_name="us-east-1")
+        response = client.get_secret_value(SecretId="LARA")
+        return json.loads(response["SecretString"])
 
 secrets = get_secrets()
 DB_URI = secrets['PIALARA_DB_URI']
